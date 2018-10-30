@@ -1,0 +1,58 @@
+/**
+ * Layout Primary Slider
+ *
+ */
+
+
+#primary_slider {
+	.slide-inner {
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		@extend .pos-a;
+	}
+
+	.swiper-slide {
+		@extend %overflow-hidden;
+	}
+
+	&.slider-type-1,
+	&.slider-type-3 {
+		height: 530px;
+
+		@include respond-to(notebook) {
+			height: 540px;
+		}
+
+		@include respond-to(tablet) {
+			height: 450px;
+		}
+
+		@include respond-to(mobile) {
+			height: 430px;
+		}
+	}
+
+	&.slider-type-2 {
+		height: 730px;
+
+		@include respond-to(tablet) {
+			height: 450px;
+		}
+
+		@include respond-to(mobile) {
+			height: 430px;
+		}
+	}
+
+	&.slider-type-4 {
+		@include respond-to(tablet) {
+			height: 450px;
+		}
+
+		@include respond-to(mobile) {
+			height: 400px;
+		}
+	}
+}

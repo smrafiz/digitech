@@ -1,0 +1,61 @@
+/**
+ * Layout Modal
+ *
+ */
+
+.modal {
+	z-index: 9990;
+	.modal-lg {
+	    max-width: 970px;
+	    margin: 60px auto;
+	}
+	
+	.modal-content {
+		@extend %slight-rounded;
+	}
+
+	.modal-header {
+		border-bottom: 0;
+
+		.close {
+		    top: -5px;
+		    font-size: 24px;
+		    @extend .pos-r;
+
+		    &:hover {
+		    	@extend %bgc-transparent;
+		    	@extend %color-primary;
+		    }
+		}
+	}
+
+	.modal-body {
+		padding: 0 40px 40px;
+
+		.product-availability {
+			@include respond-to(tablet) {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.modal-footer {
+		padding: 20px 15px;
+	}
+
+	.gallery-with-thumbs {
+		.nav-slider {
+			max-height: 285px;
+		}
+		.swiper-arrow {
+			@include respond-to(tablet) {
+				bottom: 58px;
+			}
+		}
+	}
+}
+
+.modal-backdrop {
+   background-color: #000;
+   z-index: 9950;
+}

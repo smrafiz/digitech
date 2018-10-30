@@ -1,0 +1,2 @@
+{"version":3,"sources":["layouts/faqs/lo-faqs.scss"],"names":[],"mappings":"AAAA;;;GAGG;AAEH;;EAGE,gBAAe;EACf,kBAAiB,EACjB","file":"lo-faqs.css","sourcesContent":["/**\r\n * Layout Faqs page\r\n *\r\n */\r\n\r\n.faqs-section {\r\n\tp:not(.lead),\r\n\t.card-body {\r\n\t\tfont-size: 14px;\r\n\t\tline-height: 1.65;\r\n\t}\r\n}"]
+}

@@ -1,0 +1,289 @@
+/**
+ * Layout My Account
+ *
+ */
+
+.user-dashboard {
+	a {
+		&:not(.btn) {
+			@extend %color-primary;
+
+			&:hover {
+				@extend %color-dark;
+			}
+		}
+	}
+}
+
+.user-info {
+    border-bottom: 1px solid $cx-border-color;
+    border-top: 1px solid $cx-border-color;
+    @extend %mb-full;
+
+    [class*="col-"]:not(:last-child) {
+    	.single-info {
+    		border-right: 1px solid $cx-border-color;
+
+    		@include respond-to(mobile) {
+    			border-right: 0;
+    		}
+    	}
+    }
+
+    @include respond-to(tablet) {
+    	border: 1px solid $cx-border-color;
+
+    	[class*="col-"]:nth-child(1),
+    	[class*="col-"]:nth-child(2) {
+    		border-bottom: 1px solid $cx-border-color;
+    	}
+
+    	[class*="col-"]:nth-child(2) {
+    		.single-info {
+    			border-right: 0;
+    		}
+    	}
+    }
+
+    @include respond-to(mobile) {
+    	border-top: 0;
+    	padding-bottom: 40px;
+    }
+
+	.single-info {
+	    padding: 0 20px;
+	    min-height: 110px;
+	    align-items: center;
+	    display: flex;
+
+	    @include media-only(wide, max) {
+	    	min-height: 150px;
+	    }
+
+	    @include respond-to(tablet) {
+	    	min-height: 105px;
+	    }
+
+	    @include respond-to(mobile) {
+	    	min-height: auto;
+	    	padding: 15px 0;
+	    }
+	}
+
+	.user-name {
+	    padding-left: 45px;
+	    @extend .pos-r;
+		span {
+		    font-size: 15px;
+		    font-weight: 500;
+		}
+
+		&::before {
+		    color: #555;
+		    content: "\f41a";
+		    font-family: Ionicons;
+		    font-size: 35px;
+		    left: 0;
+		    top: 0;
+		    height: 45px;
+		    line-height: 45px;
+		    @extend .pos-a;
+		}
+	}
+
+	p {
+		line-height: 1.65;
+		@extend %mb0;
+	}
+}
+
+.dashboard-list {
+	padding: 3px 15px;
+	border: 1px solid $cx-border-color;
+
+	@include respond-to(notebook) {
+		padding: 0 12px;
+	}
+
+	li {
+		> a {
+		    display: block;
+		    font-size: 14px;
+		    padding: 12px 0;
+		    text-transform: capitalize;
+		    @extend .pos-r;
+
+		    @include respond-to(notebook) {
+		    	font-size: 13px;
+		    }
+
+		    &.active {
+		    	font-weight: 500;
+		    	&::after {
+				    content: "\f488";
+				    font-family: Ionicons;
+				    margin-left: 10px;
+				    font-size: 16px;
+				    top: 48%;
+			        right: -35px;
+				    margin-top: -10px;
+				    @extend .pos-a;
+
+				    @include respond-to(notebook) {
+				    	right: -32px;
+				    }
+
+				    @include media-only(notebook, max) {
+				    	right: 0;
+				    	transform: rotate(90deg);
+				    }
+				}
+		    }
+		}
+		&:not(:last-child) {
+			> a {
+			    border-bottom: 1px solid $cx-border-color;
+			}
+		}
+	}
+}
+
+.dashboard-content {
+    border: 1px solid $cx-border-color;
+    padding: 30px;
+
+    @include media-only(notebook, max) {
+    	margin-top: $cx-col-spacing;
+    	padding: 20px;
+    }
+
+    @include respond-to(mobile) {
+    	padding: 40px 0 0;
+    	border: 0;
+    	border-top: 1px solid $cx-border-color;
+    }
+
+    h3 {
+		border-bottom: 1px solid $cx-border-color;
+	    font-size: 24px;
+	    line-height: 24px;
+	    margin-bottom: 20px;
+	    padding-bottom: 15px;
+	    text-transform: capitalize;
+    }
+
+    p {
+    	line-height: 24px;
+    	@extend %mb0;
+    }
+
+    table {
+    	@extend %mb0;
+
+    	> thead {
+    		border-bottom: 1px solid $cx-border-color;
+    		> tr {
+    			> th {
+				    font-size: 14px;
+    				font-weight: 500;
+    				border: 0;
+    			}
+    		}
+    	}
+
+    	> tbody {
+    		> tr {
+    			> td {
+				    border: 0;
+				    vertical-align: middle;
+				    @extend %color-dark;
+    			}
+    		}
+    	}
+
+    	.btn-secondary {
+    		height: 35px;
+    		line-height: 35px;
+    		text-transform: capitalize;
+    	}
+    }
+
+	#downloads,
+    #orders {
+		.table {
+			tbody {
+				td:not(:first-child) {
+				    @include respond-to(mobile) {
+				    	min-width: 150px;
+				    }
+				}
+			}
+		}
+    }
+
+    #downloads {
+		.table {
+			tbody {
+				td:first-child {
+				    @include respond-to(mobile) {
+				    	min-width: 300px;
+				    }
+				}
+			}
+		}
+    }
+}
+
+.billing-address {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.register-form {
+	padding: 40px;
+	border: 1px solid $cx-border-color;
+}
+
+.login-form {
+	.form-group {
+		.col-form-label {
+			font-size: 14px;
+		}
+	}
+
+	.form-control,
+	.custom-radio,
+	span {
+		font-size: 14px;
+	    height: 40px;
+	    padding-top: 5px;
+	}
+
+	.pass-show-btn {
+	    padding: 0 15px;
+	    height: 40px;
+	    font-size: 13px;
+	    line-height: 40px;
+	    right: 15px;
+	    top: 0;
+	    text-transform: capitalize;
+	    border-radius: 0;
+	    background: #878787;
+	    cursor: pointer;
+	    @extend %color-white;
+	    @extend .pos-a;
+
+	    &:hover,
+	    &:focus {
+	    	background: #333;
+	    }
+	}
+
+	.form-check {
+		label {
+			font-size: 13px;
+		}
+	}
+}

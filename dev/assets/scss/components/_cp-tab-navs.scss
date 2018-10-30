@@ -1,0 +1,142 @@
+/**
+ * Components Tab Navs
+ *
+ */
+
+.nav {
+	// &.nav-pills {
+	// 	margin-top: -15px;
+	// 	.nav-item {
+	// 		@include respond-to(mobile) {
+	// 			margin-bottom: 5px;
+	// 			margin-right: 1%;
+	// 		    margin-left: 1%;
+	// 		    width: 48%;
+	// 		    text-align: center;
+	// 		}
+	// 	}
+	// 	.nav-link {
+	// 	    font-size: 12px;
+	// 	    font-weight: 500;
+	// 	    height: 40px;
+	// 	    line-height: 40px;
+	// 	    padding: 0 30px 0 15px;
+	// 	    text-transform: uppercase;
+	// 	    border: 0;
+	// 	    @extend %bgc-transparent;
+	// 	    @extend %color-secondary;
+
+	// 	    @include respond-to(mobile) {
+	// 	    	padding: 0;
+	// 	    }
+
+	// 		&:hover,
+	// 	    &.active {
+	// 			@extend %border-primary;
+	// 			@extend %bgc-transparent;
+	// 			@extend %color-primary;
+	// 	    }
+	// 	}
+
+	// 	.nav-item {
+	// 	    &:last-child {
+	// 	    	.nav-link {
+	// 	    		padding-right: 15px;
+
+	// 	    		@include media-only(small-mobile, max) {
+	// 	    			padding-right: 0;
+	// 	    		}
+	// 	    	}
+	// 	    }
+	// 	}
+	// }
+
+	&.top-nav {
+        bottom: calc(100% + 10px);
+	    right: 80px;
+	    @extend .pos-a;
+	}
+
+	.nav-link {
+	    font-size: 13px;
+	    line-height: 30px;
+	    @extend %color-dark;
+
+	    &.active,
+	    &:hover,
+	    &:focus {
+	    	@extend %color-primary;
+	    }
+	}
+}
+
+.tab-content {
+	>.tab-pane {
+		display: block;
+		height: 0;
+		overflow: hidden;
+
+		&.show {
+			height: auto;
+			overflow: initial;
+		}
+
+		&.active {
+			 &.anime-tab {
+				* {
+				    animation-duration: 0.5s;
+				    animation-fill-mode: both;
+				}
+
+				.swiper-slide-visible {
+					animation-delay: 0.1s;
+				    animation-name: zoomIn;
+				}
+
+				.product-layout {
+					.shop-products-wrapper & {
+						animation-delay: 0.1s;
+						animation-duration: 0.5s;
+					    animation-name: zoomIn;
+					}
+				}
+			}
+		}
+	}
+
+	>#list {
+		&.tab-pane {
+			&.active {
+				 &.anime-tab {
+					.product-layout {
+						animation-delay: 0.1s;
+						animation-duration: 0.5s;
+					    animation-name: fadeInRightShort;
+					}
+				}
+			}
+		}
+	}
+}
+
+@-webkit-keyframes fadeInRightShort {
+    from {
+        opacity: 0;
+        transform: translate3d(10%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@keyframes fadeInRightShort {
+    from {
+        opacity: 0;
+        transform: translate3d(10%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}

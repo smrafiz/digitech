@@ -1,0 +1,152 @@
+/**
+ * Components Button
+ *
+ */
+
+.default-btn {
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    padding: 0 30px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+    display: inline-block;
+    cursor: pointer;
+    min-width: 140px;
+    @extend %slight-rounded;
+    @extend %color-white;
+    @extend %bgc-tertiary;
+
+    &:hover,
+    &:focus {
+        box-shadow: none;
+        @extend %bgc-primary;
+        @extend %color-white;
+    }
+
+    &.transparent {
+    	border: 1px solid lighten($cx-text-color, 100%);
+        @extend %bgc-transparent;
+
+	    &:hover,
+	    &:focus {
+            @extend %border-primary;
+            @extend %bgc-primary;
+	    }
+    }
+
+    &.large {
+        min-width: 245px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 30px;
+    }
+
+    &.tiny-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+        line-height: 2;
+        letter-spacing: 0.05em;
+        min-width: auto;
+    }
+
+    @include respond-to(mobile) {
+        padding: 0 20px;
+        font-size: 14px;
+        height: 38px;
+        line-height: 39px;
+    }
+
+    &.secondary {
+        border: 2px solid $cx-primary-color;
+        font-weight: 500;
+        @extend %bgc-white;
+        @extend %color-primary;
+
+        &:hover,
+        &:focus {
+            @extend %bgc-primary;
+            @extend %color-white;
+        }
+    }
+}
+
+.text-btn {
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 20px;
+    padding: 0;
+    display: inline-block;
+    font-weight: 500;
+    @extend %color-white;
+    @extend .pos-r;
+
+    &::after {
+        content: "";
+        display: block;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 1px;
+        @extend .pos-a;
+        @extend %bgc-primary;
+        @extend %cx-transition;
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+
+    &.dark {
+        @extend %color-secondary;
+
+        &:hover {
+            @extend %color-primary;
+        }
+    }
+}
+
+.btn {
+    &.btn-primary {
+        &:not(:disabled):not(.disabled):active:focus,
+        &:hover,
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    
+    &.btn-secondary {
+        text-transform: uppercase;
+        background: #f4f4f4;
+        color: #444;
+        height: 40px;
+        line-height: 40px;
+        border: 0;
+        padding: 0 20px;
+        font-weight: 500;
+        font-size: 13px;
+        @extend %cx-transition;
+
+        &:not(:disabled):not(.disabled):active:focus,
+        &:hover,
+        &:focus {
+            box-shadow: none;
+            @extend %bgc-primary;
+            @extend %color-white;
+        }
+
+        &.dark {
+            @extend %bgc-dark;
+            @extend %color-white;
+
+            &:hover,
+            &:focus {
+                @extend %bgc-primary;
+            }
+        }
+    }
+}

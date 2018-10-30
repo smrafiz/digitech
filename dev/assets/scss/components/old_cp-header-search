@@ -1,0 +1,60 @@
+/**
+ * Components Header Search
+ *
+ */
+
+.header-search-area {
+	form {
+	    max-width: 200px;
+
+	    @include respond-to(mobile) {
+	    	max-width: 155px;
+	    }
+
+	    @include media-only(small-mobile, max) {
+	    	max-width: 200px;
+	    	margin: auto;
+	    }
+	}
+	input {
+		&[type="text"] {
+		    padding: 0 20px 0 0;
+		    height: 25px;
+		    z-index: 1;
+		    border: 0;
+		    font-size: 13px;
+		    font-weight: 300;
+		    @extend %bgc-transparent;
+		}
+	}
+
+	.header-search-btn {
+	    line-height: 0;
+	    width: 25px;
+	    padding: 0;
+	    height: 25px;
+	    @extend %bgc-transparent;
+
+	    i {
+			font-weight: bold;
+		    font-size: 20px;
+
+		    @include respond-to(mobile) {
+		    	font-size: 22px;
+		    }
+	    }
+	}
+
+	::-webkit-input-placeholder{
+	  color: #242424;
+	}
+	::-moz-placeholder{
+	  color: #242424;
+	}
+	:-ms-input-placeholder{
+	  color: #242424;
+	}
+	:-moz-placeholder {
+	  color: #242424;
+	}
+}

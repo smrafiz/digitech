@@ -1,0 +1,62 @@
+/**
+ * Layout Login / Register
+ *
+ */
+
+.login-wrapper {
+	.login-form {
+	    padding: 50px 50px 40px;
+	    border: 1px solid rgba(0,0,0,.125);
+        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2);
+
+        @include media-only(notebook, max) {
+        	&.mt-full {
+        		margin-top: 15px;
+        	}
+        }
+
+        @include media-only(small-mobile, max) {
+        	padding: 30px;
+        }
+
+        a {
+        	@extend %color-black;
+
+        	&:hover,
+        	&:focus {
+				@extend %color-primary;
+        	}
+        }
+	}
+
+	p {
+		font-size: 14px;
+		@extend %mb0;
+	}
+
+	.registration-form {
+		padding-bottom: 50px;
+
+		@include media-only(small-mobile, max) {
+			padding-bottom: 30px;
+		}
+	}
+
+	.login-info {
+		p {
+			font-size: 15px;
+
+			a {
+				font-size: 16px;
+
+				@include media-only(small-mobile, max) {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.default-btn {
+		@extend %slight-rounded;
+	}
+}

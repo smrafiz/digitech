@@ -1,0 +1,244 @@
+/**
+ * Components Header Cart
+ *
+ */
+
+.header-cart {
+	
+	button {
+	    padding: 0;
+	    height: auto;
+	    line-height: 1;
+	    cursor: pointer;
+	    @extend .pos-r;
+
+	    i {
+		    // font-size: 20px;
+		    // left: -6px;
+		    // font-weight: bold;
+		    // @extend %color-black;
+		    @extend %cx-transition;
+		    @extend .pos-r;
+
+		    @include respond-to(mobile) {
+		    	font-size: 22px;
+		    }
+	    }
+
+	    .count-style {
+		    width: 17px;
+		    height: 17px;
+		    line-height: 17px;
+		    font-size: 10px;
+		    text-align: center;
+		    top: -5px;
+		    right: -5px;
+		    z-index: 2;
+		    @extend .pos-a;
+		    @extend .circle;
+		    @extend %color-white;
+		    @extend %bgc-primary;
+	    }
+
+		&:focus,
+	    &:hover {
+	    	@extend %bgc-transparent;
+	    	@extend %border-primary;
+	    	i {
+	    		@extend %color-primary;
+	    	}
+	    }
+
+	    &::after {
+	    	content: none;
+	    }
+	}
+
+	.dropdown-menu {
+	    max-height: 0;
+	    display: block;
+	    z-index: 9911;
+	    right: -10px;
+	    left: auto;
+	    padding: 0;
+	    border: 0;
+        transition: all .3s ease-out;
+	    box-shadow: none;
+	    width: 355px;
+	    @extend %overflow-hidden;
+	    @extend %bgc-transparent;
+
+	    @include media-only(small-mobile, max) {
+			width: 290px;
+			left: 50%;
+			transform: translateX(-42%);
+	    }
+
+	    &.open {
+		    max-height: 450px;
+		    @include media-only(small-mobile, max) {
+		    	max-height: 490px;
+		    }
+	    }
+
+	    @include media-only(small-mobile, max) {
+		    .default-btn {
+		    	width: 100%;
+
+		    	&:first-child {
+		    		margin-bottom: 12px;
+		    	}
+		    }
+	    }
+
+	    .shopping-cart-content {
+	    	margin: 15px 10px 10px;
+	    	box-shadow: 0 3px 9.3px 0.7px rgba(0,0,0,.15);
+    	    border: 1px solid #e5e5e5;
+	    	border-top: 2px solid $cx-primary-color;
+	    	@extend %bgc-white;
+	    }
+
+	    ul {
+		    max-height: 270px;
+		    overflow-y: auto;
+		    padding: 30px 20px 0;
+		    @extend %mb0;
+	    }
+    }
+
+	.single-cart-item {
+	    border-bottom: 1px solid $cx-border-color;
+	    margin-bottom: 20px;
+	    padding-bottom: 20px;
+		.shopping-cart-delete {
+		    top: -3px;
+		    font-size: 16px;
+		    @extend .pos-r;
+		}
+
+		.shopping-cart-img {
+			@extend .pos-r;
+		}
+
+		.shopping-cart-title {
+			padding-right: 10px;
+		}
+
+		.product-quantity {
+		    top: -4px;
+		    left: -4px;
+		    min-width: 25px;
+		    line-height: 25px;
+		    padding: 0;
+		    text-align: center;
+		    font-size: 13px;
+		    display: inline-block;
+		    @extend .circle;
+		    @extend .pos-a;
+		    @extend %bgc-primary;
+		    @extend %color-white;
+		}
+
+		img {
+			max-width: 80px;
+		    border: 2px solid $cx-border-color;
+		    padding: 3px;
+		}
+
+		h4 {
+			font-size: 15px;
+			font-weight: 400;
+			text-transform: capitalize;
+			margin-bottom: 5px;
+			padding-right: 5px;
+			@include cx-truncation(1, 1.2, #fff);
+
+			@include media-only(small-mobile, max) {
+				font-size: 14px;
+				font-weight: 500;
+			}
+		}
+
+		.cart-price {
+			margin-bottom: 5px;
+			font-weight: 500;
+		    font-size: 15px;
+			@extend %color-primary;
+		}
+
+		.shopping-cart-delete {
+			i {
+				@extend %color-secondary;
+			}
+		}
+
+		&:last-child {
+			border: 0;
+			@extend %mb0;
+		}
+	}
+
+	.shopping-cart-title {
+		span {
+			display: block;
+		    @extend %color-dark;
+		}
+	}
+
+	.shopping-cart-total {
+		padding: 20px 20px 0;
+	    box-shadow: 0 -5px 20px -5px rgba(0, 0, 0, 0.08);
+		h4 {
+			font-size: 16px;
+		    line-height: 1.4;
+		    text-transform: capitalize;
+		    margin-bottom: 10px;
+		    font-weight: 500;
+		    > span {
+		    	float: right;
+	    	    @extend %color-primary;
+		    }
+		}
+	}
+
+	.shopping-cart-btn {
+		padding: 10px 20px 20px;
+		overflow: hidden;
+		> .default-btn {   		
+		    &:last-child {
+		    	float: right;
+		    }
+		}
+	}
+}
+
+.header-cart-area {
+	.top-links {
+		.dropdown-menu {
+			top: 100%;
+		}
+	}
+
+	.list-inline {
+		.list-inline-item {
+			i {
+				font-size: 20px;
+				font-weight: bold;
+				line-height: 1;
+
+			    @include respond-to(mobile) {
+			    	font-size: 22px;
+			    }
+			}
+
+			a {
+				&:hover,
+				&:focus {
+					@extend %bgc-transparent;
+					@extend %color-primary;
+				}
+			}
+		}
+	}
+}

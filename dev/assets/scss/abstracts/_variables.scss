@@ -1,0 +1,77 @@
+
+//-------------------- Base Typography --------------------//
+
+$cx-body-font: 					'Rubik',sans-serif !default;
+
+
+//-------------------- Font Sizes --------------------//
+
+$cx-body-font-size: 			13px !default;
+$cx-h1-font-size: 				22px !default;
+$cx-h2-font-size: 				20px !default;
+$cx-h3-font-size: 				18px !default;
+$cx-h4-font-size: 				15px !default;
+$cx-h5-font-size: 				12px !default;
+$cx-h6-font-size: 				10.2px !default;
+$cx-icon-font-size: 			14px !default;
+
+
+//-------------------- Base Color --------------------//
+
+$cx-text-color: 				#000 !default;
+$cx-body-bg-color: 				#fff !default;
+$cx-primary-color:  			#2e6ed5 !default;
+$cx-secondary-color: 			#242424 !default;
+$cx-tertiary-color: 			#363f4d !default;
+$cx-offset-color:				#f6f6f6 !default;
+$cx-border-color:				#ebebeb !default;
+
+
+//-------------------- Line Height --------------------//
+
+$cx-body-line-height: 			20px !default;
+$cx-body-font-weight : 			400 !default;
+
+
+//-------------------- Default Spacing --------------------//
+
+$cx-heading-margin-bottom: 		10px !default;
+$cx-section-spacing:	 		80px !default;
+$cx-col-spacing:				0.5 * $cx-section-spacing !default; // will be used as bottom margin/padding
+
+
+//-------------------- Default Mobile Spacing --------------------//
+
+$shrink-factor:					0.75 !default; // shrink spacing for mobile
+$cx-col-spacing-mob:			$shrink-factor * $cx-col-spacing !default; // shrink col spacing for mobile
+$cx-section-spacing-mob:		$shrink-factor * $cx-section-spacing !default; // shrink col spacing for mobile
+
+
+//-------------------- Default Transition --------------------//
+
+$cx-transition: 				 all 0.7s cubic-bezier(0.2, 1, 0.22, 1) !default;
+
+
+//-------------------- Default Breakpoint / Screen Size --------------------//
+
+$cx-lg-screen:					1200px !default;
+$cx-md-screen: 					992px !default;
+$cx-sm-screen:					768px !default;
+$cx-vsm-screen:					480px !default;
+
+$cx-breakpoints: (
+    "wide":    					$cx-lg-screen,
+    "notebook":    				$cx-md-screen,
+    "tablet":    				$cx-sm-screen,
+    "small-mobile": 			$cx-vsm-screen, 
+);
+
+
+//-------------------- Social Icon Colors --------------------//
+
+$facebook-color:           		#435f9f;
+$twitter-color:                 #00aaf0;
+$gplus-color:                   #e04b34;
+$pinterest-color:               #ce1f21;
+$instagram-color:               #8a3ab9;
+$linkedin-color:                #4875b4;

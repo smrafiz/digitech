@@ -1,0 +1,217 @@
+/**
+ * Components Promo Banner
+ *
+ */
+
+.promo-banner {
+	@extend %overflow-hidden;
+	@extend %mb-half;
+
+	> a {
+		display: inline-block;
+		width: 100%;
+		@extend .pos-r;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	&.hover-effect-1 {
+		> a {
+			&::before {
+			    content: "";
+			    top: 19.5px;
+			    right: 19.5px;
+			    bottom: 19.5px;
+			    left: 19.5px;
+			    border: 1.5px solid lighten($cx-text-color, 100%);
+			    opacity: 0;
+			    z-index: 1;
+			    transition: opacity 0.35s,transform 0.35s;
+			    transform: translate3d(-10px,0,0);
+			    @extend .pos-a;
+			}
+		}
+
+		&:hover {
+			> a {
+				&::before {
+				    opacity: 1;
+				    transform: translate3d(0,0,0);
+				}
+			}
+		}
+	}
+
+	.top-banner & {
+		margin-bottom: 20px;
+	}
+
+	&.last {
+		@include media-only(notebook, max) {
+			margin-top: 20px;
+		}
+
+		@include respond-to(mobile) {
+			margin-top: 0;
+		}
+	}
+
+	&.hover-effect-2 {
+		> a {
+			&::before,
+			&::after {
+			    content: '';
+			    position: absolute;
+			    left: 19.5px;
+			    right: 19.5px;
+			    top: 19.5px;
+			    bottom: 19.5px;
+			    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+			    transition: opacity 0.35s, -webkit-transform 0.35s;
+			    transition: opacity 0.35s, transform 0.35s;
+			    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+			    z-index: 7;
+			}
+
+			&::before {
+			    border-top: 1.5px solid lighten($cx-text-color, 100%);
+			    border-bottom: 1.5px solid lighten($cx-text-color, 100%);
+			    transform: scale(0, 1);
+			}
+
+			&::after {
+			    border-right: 1.5px solid lighten($cx-text-color, 100%);
+			    border-left: 1.5px solid lighten($cx-text-color, 100%);
+			    transform: scale(1, 0);
+			}
+		}
+
+		&:hover {
+			> a {
+				&::before,
+				&::after {
+				    transform: scale(1, 1);
+				}
+			}
+		}
+	}
+
+	&.hover-effect-3 {
+		> a {
+		    overflow: hidden;
+		    vertical-align: top;
+		    border-radius: 2px;
+
+		    img {
+	    	    @extend %cx-transition;
+				
+				&:hover {
+					transform: scale3d(1.03, 1.03, 1.03);
+				}
+		    }
+		}
+	}
+}
+
+.banner-with-text,
+.image-placeholder {
+	.promo-banner-section & {
+		height: 590px;
+
+	    @include respond-to(mobile) {
+	    	height: auto;
+	    }
+	}
+}
+
+.banner-with-text {
+	.promo-text {
+	    top: 50%;
+	    width: 50%;
+	    text-align: center;
+	    transform: translateY(-50%);
+	    @extend .pos-a;
+
+	    @include respond-to(tablet) {
+	    	text-align: left;
+	    }
+
+	    @include respond-to(mobile) {
+			position: static;
+			width: 100%;
+			transform: none;
+			padding: $cx-section-spacing-mob 0;
+	    }
+	}
+
+	h1 {
+	    font-size: 48px;
+	    margin-bottom: 20px;
+	    text-transform: capitalize;
+	    @extend %color-primary;
+
+	    @include respond-to(tablet) {
+	    	font-size: 40px;
+	    }
+
+	    @include respond-to(mobile) {
+	    	font-size: 30px;
+	    }
+	}
+
+	h2 {
+	    font-size: 36px;
+	    letter-spacing: -.025em;
+	    font-weight: 500;
+	    text-transform: capitalize;
+	    line-height: 1.2;
+	    @extend %mb-half;
+	    @extend %color-secondary;
+
+	    span {
+	    	@extend %color-primary;
+	    }
+
+	    @include respond-to(tablet) {
+	    	font-size: 30px;
+	    }
+
+	    @include respond-to(mobile) {
+	    	font-size: 24px;
+	    }
+	}
+
+	p {
+	    font-size: 14px;
+	    line-height: 30px;
+	    margin-bottom: 0;
+	    @extend %color-secondary;
+
+	    @include respond-to(mobile) {
+	    	line-height: 26px;
+	    }
+	}
+
+	.default-btn {
+		@extend %mt-half;
+
+		@include media-only(notebook, max) {
+		    min-width: 180px;
+		    height: 40px;
+		    line-height: 40px;
+		}
+	}
+}
+
+@include media-only(small-mobile, max) {
+	.banner-section {
+		.row {
+			> .col-6 {
+				max-width: 100%;
+				flex-basis: 100%;
+			}
+		}
+	}
+}

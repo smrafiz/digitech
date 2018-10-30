@@ -1,0 +1,71 @@
+/*
+	Template Name: Pebona
+	Author: Codexin
+	Description: eCommerce HTML5 Bootstrap 4 Template
+	Version: 1.0
+
+*/
+
+/******************************
+
+INDEX:
+
+	c00 - Base - Global
+	c01 - Base - Typography
+	c02 - Base - Helpers
+	c03 - Base - Colors
+
+	c10 - Components Section
+
+	c20 - Layout - Header
+	c21 - Layout - Footer
+	c22 - Layout - Various Sliders
+	c23 - Layout - Clients
+	c24 - Layout - Newsletter
+	c25 - Layout - Shop
+	c26 - Layout - Single Product
+	c27 - Layout - Cart Page
+	c28 - Layout - Checkout
+	c29 - Layout - My Account
+	c30 - Layout - Login / Register
+	c31 - Layout - Wishlist & Compare
+	c32 - Layout - Blog
+	c32 - Layout - Blog Details
+	c33 - Layout - Boxed
+	c34 - Layout - Fluid
+	c35 - Layout - About Page
+	c36 - Layout - Contact Page
+	c37 - Layout - FAQs Page
+	c38 - Layout - 404 Page
+	c39 - Layout - Modal
+
+******************************/
+
+/*
+	Defult Primary Color:       #cc2121
+	Default Secondary Color:    #242424
+	Default Offset Color:       #f6f6f6
+	Default Border Color:       #ededed
+	Default Text Color:         #000
+	Default Body Font:          'Rubik',sans-serif
+
+*/
+
+@charset "UTF-8";
+
+/* Importing Google Font 'Rubik' */
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
+
+
+
+// Abstracts
+@import "abstracts/__abstracts-dir";
+
+// Base Styles
+@import "base/__base-dir";
+
+// Components
+@import "components/__components-dir";
+
+// Layouts
+@import "layouts/__layouts-dir";

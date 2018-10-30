@@ -1,0 +1,127 @@
+/**
+ * Layout 404 Page
+ *
+ */
+
+.error-wrapper {
+
+	h1 {
+	    font-size: 200px;
+	    font-weight: 700;
+	    letter-spacing: 10px;
+	    line-height: 150px;
+	    margin-bottom: 30px;
+	    @extend %color-primary;
+
+	    @include respond-to(tablet) {
+	    	font-size: 170px;
+	    }
+
+	    @include respond-to(mobile) {
+	    	font-size: 100px;
+	    	line-height: 1;
+	    }
+	}
+
+	h2 {
+	    font-size: 32px;
+	    font-weight: 700;
+	    line-height: 32px;
+	    margin-bottom: 20px;
+	    text-transform: uppercase;
+	    @extend %color-dark;
+
+	    @include respond-to(tablet) {
+	    	font-size: 28px;
+	    }
+
+	    @include respond-to(mobile) {
+	    	font-size: 24px;
+	    	line-height: 1.3;
+	    }
+
+	    @include media-only(small-mobile, max) {
+	    	font-size: 20px;
+	    }
+	}
+
+	p {
+	    font-size: 21px;
+	    font-weight: 300;
+	    line-height: 30px;
+	    margin-bottom: 25px;
+	    padding: 0px 130px;
+	    @extend %color-black;
+
+	    @include respond-to(tablet) {
+	    	font-size: 18px;
+	    }
+
+	    @include respond-to(mobile) {
+			font-size: 16px;
+			padding: 0 30px;
+			line-height: 1.6;
+	    }
+
+	    @include media-only(small-mobile, max) {
+	    	padding: 0 15px;
+	    }
+	}
+
+	#search-form {
+	    width: 450px;
+	    margin: auto;
+	    @extend .pos-r;
+
+		@include media-only(small-mobile, max) {
+			width: 270px;
+		}
+
+	    input[type="search"] {
+		    border: 1px solid $cx-border-color;
+		    color: #666666;
+		    float: left;
+		    font-size: 14px;
+		    height: 45px;
+		    padding: 0 50px 0 20px;
+		    width: 100%;
+		    @extend %slight-rounded;
+		    @extend %bgc-offset;
+
+		    &:focus {
+		    	@extend %border-primary;
+		    }
+	    }
+
+	    button {
+		    border: medium none;
+		    color: #4f4f4f;
+		    height: 100%;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    width: 50px;
+		    line-height: 45px;
+		    z-index: 3;
+		    @extend %bgc-transparent;
+
+		    i {
+		    	font-size: 18px;
+		    }
+
+		    &:hover,
+		    &:focus {
+		    	@extend %color-primary;
+		    }
+	    }
+	}
+
+	.btn.btn-secondary {
+		@extend %bgc-primary;
+		@extend %color-white;
+
+		&:hover {
+			@extend %bgc-dark;
+		}
+	}
+}

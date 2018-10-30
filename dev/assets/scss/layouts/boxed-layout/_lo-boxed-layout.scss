@@ -1,0 +1,128 @@
+/**
+ * Layout Boxed Layout
+ *
+ */
+
+.boxed-layout {
+	header {
+		@extend %pb-half;
+
+	    @include media-only(small-mobile, max) {
+			padding-bottom: 20px;
+	    }
+	}
+
+	.main-content-wrapper {
+	    max-width: 1220px;
+	    width: 100%;
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+	    position: relative;
+	    overflow: initial;
+	    @extend %bgc-white;
+	    @extend %pb-half;
+
+	    @media only screen and (max-width: 1220px) {
+	    	width: auto;
+	    	max-width: 100%;
+	    }
+
+	    &::before {
+			content: "";
+		    top: -40px;
+		    left: 0;
+		    right: 0;
+		    width: 100%;
+		    @extend .pos-a;
+		    @extend %pt-half;
+		    @extend %bgc-white;
+
+		    @include respond-to(mobile) {
+		    	top: -29px;
+		    }
+
+		    @include media-only(small-mobile, max) {
+				top: -20px;
+		    }
+	    }
+	}
+
+	#main_nav {
+		.mega-container,
+		> ul > li > ul {
+			border-color: transparent;
+		}
+	}
+
+	.container {
+		width: auto;
+		padding-left: 0;
+		padding-right: 0;
+
+	    @media only screen and (max-width: 1220px) {
+	    	max-width: 100%;
+	    	padding: 0 40px;
+	    }
+
+	    @include respond-to(mobile) {
+	    	padding: 0 30px;
+	    }
+
+	    @include media-only(small-mobile, max) {
+	    	padding: 0 15px;
+	    }
+	}
+
+	.product-row {
+		&.row {
+			margin-left: -30px;
+			margin-right: -30px;
+
+			@include media-only(small-mobile, max) {
+				margin-right: -15px;
+				margin-left: -15px;
+
+				.element-carousel {
+					padding: 15px 0;
+				}
+			}
+
+			> .col-12 {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
+		.swiper-arrow {
+			&.next {
+				right: -30px;
+
+				@media only screen and (max-width: 1300px) {
+					right: -15px;
+				}
+
+				@media only screen and (max-width: 1250px) {
+					right: 0;
+				}
+			}
+
+			&.prev {
+				left: -30px;
+
+				@media only screen and (max-width: 1300px) {
+					left: -15px;
+				}
+
+				@media only screen and (max-width: 1250px) {
+					left: 0;
+				}
+			}
+		}
+	}
+
+	footer {
+		margin-top: -$cx-col-spacing;
+		padding-top: 1.5 * $cx-section-spacing;
+	}
+}

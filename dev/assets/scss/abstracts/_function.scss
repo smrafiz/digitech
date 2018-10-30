@@ -1,0 +1,38 @@
+//-------------------- REM value calcuation --------------------//
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+
+//-------------------- SASS Color Palletes --------------------//
+@function cx-color($color, $tone) {
+
+    @warn map-get($scheme, $color);
+
+    @if map-has-key($scheme, $color) {
+
+        $color: map-get($scheme, $color);
+        @if map-has-key($color, $tone) {
+            $tone: map-get($color, $tone);
+            @return $tone;
+        }
+
+        @warn "unknown tone `#{$tone}` in color";
+        @return null;
+    }
+
+    @warn "unknown color `#{$color}` in palette";
+    @return null;
+}
+
+
+
+//-------------------- SASS Color change with BG Color --------------------//
+@function change-text-color($color) {
+    @if (lightness($color) > 50) {
+        @return #000000; // Lighter backgorund, return dark color
+    } @else {
+        @return #ffffff; // Darker background, return light color
+    }
+}

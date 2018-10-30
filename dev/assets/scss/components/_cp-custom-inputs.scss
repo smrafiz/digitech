@@ -1,0 +1,167 @@
+/**
+ * Components Custom Inputs
+ *
+ */
+
+.custom-checkbox {
+	label {
+		padding-left: 30px;
+		text-transform: capitalize;
+		cursor: pointer;
+	}
+	@extend .pos-r;
+	input[type="checkbox"] {
+		opacity: 0;
+		cursor: pointer;
+		width: 20%;
+		left: 0;
+		@extend .pos-a;
+		@extend %cx-transition;
+	}
+
+	.checkmark {
+	    top: 0;
+	    left: 0;
+	    height: 20px;
+	    width: 20px;
+	    background-color: #dedede;
+	    z-index: -1;
+	    @extend .pos-a;
+		@extend %cx-transition;
+
+		&::after {
+		    content: "";
+		    opacity: 0;
+		    left: 0;
+		    top: 3px;
+		    width: 6px;
+		    height: 11px;
+		    border: solid white;
+		    border-width: 0 2px 2px 0;
+		  	transform: rotate(45deg);
+		  	@extend .pos-a;
+		  	@extend %cx-transition;
+		}
+	}
+
+	&:hover {
+		input ~ .checkmark {
+			background-color: #ccc;
+		}
+
+		input:checked ~ .checkmark {
+			@extend %bgc-primary;
+		}
+	}
+
+	input:checked ~ .checkmark {
+		@extend %bgc-primary;
+
+		&::after {
+			left: 7px;
+			opacity: 1;
+		}
+	}
+}
+
+.custom-radio {
+    display: block;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+    @extend .pos-r;
+
+    &:hover {
+		input ~ .checkmark {
+		    background-color: #ccc;
+		}
+    }
+
+	.checkmark {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 25px;
+	    width: 25px;
+	    background-color: #dedede;
+	    z-index: -1;
+	    @extend %cx-transition;
+	    @extend .circle;
+
+	    &::after {
+		    content: "";
+		    position: absolute;
+		    display: none;
+		 	top: 8.5px;
+			left: 0;
+			width: 8px;
+			height: 8px;
+			@extend .circle;
+			@extend %bgc-white;
+			@extend %cx-transition;
+	    }
+	}
+
+    input[type="radio"] {
+	    opacity: 0;
+	    cursor: pointer;
+		width: 100%;
+	    left: 0;
+	    @extend .pos-a;
+
+	    &:checked ~ .checkmark {
+		    @extend %bgc-primary;
+
+		    &::after {
+		    	left: 8.5px;
+		    	display: block;
+		    }
+		}
+    }
+}
+
+.cart-input {
+	width: 76px;
+	text-align: left;
+	@extend .pos-r;
+}
+
+.cart-input-box {
+	border: 1px solid #ddd;
+	height: 46px;
+	text-align: center;
+	width: 48px;
+}
+
+.dec.qtybutton, 
+.inc.qtybutton {
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	cursor: pointer;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	width: 28px;
+	@extend .pos-a;
+	@extend %cx-transition;
+}
+
+.dec.qtybutton, 
+.inc.qtybutton {
+	&:hover,
+	&:focus {
+		background: #ddd;
+	}
+}
+
+.dec.qtybutton {
+	bottom: 0;
+	right: 0;
+}
+
+.inc.qtybutton {
+	border-bottom: none;
+	top: 0;
+	right: 0;
+}

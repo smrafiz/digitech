@@ -1,0 +1,46 @@
+/**
+ * layout Intelligent-header
+ *
+ */
+
+header {
+	.main-nav-area {
+		position: absolute;
+		left: 0;
+		top: 161px;
+		width: 100%;
+		&.scrolling-up {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: darken(rgba($cx-text-color, 0.95), 5%);
+		}
+	}
+}
+
+.header--fixed {
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.headroom {
+    will-change: transform;
+    @include cx-transition(all .3s ease-in-out);
+}
+
+.headroom--pinned {
+    @include transform-translateY(0);
+}
+
+.headroom--unpinned {
+    @include transform-translateY(-100%);
+}
+
+.intelligent-header-space {
+	z-index: -1;
+	@extend .pos-r;
+}

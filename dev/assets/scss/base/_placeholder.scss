@@ -1,0 +1,226 @@
+// Padding Helpers
+
+%vpadding {
+	padding-top: $cx-section-spacing;
+	padding-bottom: $cx-section-spacing;
+	@include respond-to(mobile) {
+		padding-top: $cx-section-spacing-mob;
+		padding-bottom: $cx-section-spacing-mob;
+	}
+}
+
+%pb-full {
+	padding-bottom: $cx-section-spacing;
+	@include respond-to(mobile) {
+		padding-bottom: $cx-section-spacing-mob;
+	}
+}
+
+%pt-full {
+	padding-top: $cx-section-spacing;
+	@include respond-to(mobile) {
+		padding-top: $cx-section-spacing-mob;
+	}
+}
+
+%pb-half {
+	padding-bottom: $cx-col-spacing;
+	@include respond-to(mobile) {
+		padding-bottom: $cx-col-spacing-mob;
+	}
+}
+
+%pt-half {
+	padding-top: $cx-col-spacing;
+	@include respond-to(mobile) {
+		padding-top: $cx-col-spacing-mob;
+	}
+}
+
+%padding-0 {
+	padding: 0;
+}
+
+%pt0 {
+	padding-top: 0;
+}
+
+%pb0 {
+	padding-bottom: 0;
+}
+
+
+// Margin Helpers
+
+%vmargin {
+	margin-top: $cx-section-spacing;
+	margin-bottom: $cx-section-spacing;
+	@include respond-to(mobile) {
+		margin-top: $cx-section-spacing-mob;
+		margin-bottom: $cx-section-spacing-mob;
+	}
+}
+
+%mb-full {
+	margin-bottom: $cx-section-spacing;
+	@include respond-to(mobile) {
+		margin-bottom: $cx-section-spacing-mob;
+	}
+}
+
+%mt-full {
+	margin-top: $cx-section-spacing;
+	@include respond-to(mobile) {
+		margin-top: $cx-section-spacing-mob;
+	}
+}
+
+%mb-half {
+	margin-bottom: $cx-col-spacing;
+	@include respond-to(mobile) {
+		margin-bottom: $cx-col-spacing-mob;
+	}
+}
+
+%mt-half {
+	margin-top: $cx-col-spacing;
+	@include respond-to(mobile) {
+		margin-top: $cx-col-spacing-mob;
+	}
+}
+
+%margin-0 {
+	margin: 0;
+}
+
+%mt0 {
+	margin-top: 0;
+}
+
+%mb0 {
+	margin-bottom: 0;
+}
+
+
+// Hide an element
+
+%visuallyhidden {
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
+
+
+// Common Helpers
+
+%clearfix {
+	&::before,
+    &::after {
+        content: "";
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+    zoom: 1;
+}
+
+%default-heading {
+	line-height: 1;
+	text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: $cx-heading-margin-bottom;
+}
+
+%cx-transition {
+	transition: $cx-transition;
+}
+
+
+// Vertically and Horizantally Centering
+
+%display-flex {
+	@include flex;
+}
+
+%vhcenter {
+	@extend %display-flex ;
+	align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
+// Only vertical centering
+
+%vcenter {
+	@extend %display-flex ;
+	align-items: center;	
+}
+
+%flex_end {
+	@extend %display-flex ;
+	justify-content:  flex-end ;
+}
+
+
+// Border Helpers
+
+%cx-top-border {
+	@include cx-border(1px, 0, 0, 0);
+}
+
+%cx-right-border {
+	@include cx-border(0, 1px, 0, 0);
+}
+
+%cx-bottom-border {
+	@include cx-border(0, 0, 1px, 0);
+}
+
+%cx-left-border {
+	@include cx-border(0, 0, 0, 1px);
+}
+
+%cx-right-bottom-border {
+	@include cx-border(0, 1px, 1px, 0);
+}
+
+%cx-bottom-left-border {
+	@include cx-border(0, 1px, 1px, 0);
+}
+
+%cx-top-right-border {
+	@include cx-border(1px, 1px, 0, 0);
+}
+
+%cx-left-top-border {
+	@include cx-border(1px, 0, 0, 1px);
+}
+
+
+// Other Helpers
+
+%eqheight {
+	@include eqheight;
+}
+
+%overflow-hidden {
+	overflow: hidden;
+}
+
+%rounded-corners {
+	border-radius: 22px;
+}
+
+%slight-rounded {
+	border-radius: 3px;
+}

@@ -1,0 +1,10 @@
+/**
+ * Layout Faqs page
+ *
+ */
+.faqs-section p:not(.lead),
+.faqs-section .card-body {
+  font-size: 14px;
+  line-height: 1.65; }
+
+/*# sourceMappingURL=lo-faqs.css.map */

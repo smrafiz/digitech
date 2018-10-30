@@ -1,0 +1,117 @@
+/**
+ * Components Pagination
+ *
+ */
+
+ .pagination-area {
+    padding-top: 20px;
+    margin-top: -20px;
+    border-top: 1px solid $cx-border-color;
+
+    @include media-only(small-mobile, max) {
+    	padding: 15px;
+    }
+
+    .pagination {
+    	line-height: 1;
+    	margin: 0;
+    	justify-content: flex-end;
+
+    	li {
+    		a,
+    		span {
+			    border: none;
+			    font-size: 14px;
+			    font-weight: 400;
+			    padding: 0;
+			    margin: 0 7px;
+			    text-align: center;
+			    @extend %color-black;
+			    @extend %bgc-transparent;
+
+			    &:hover,
+			    &:focus {
+			    	box-shadow: none;
+	    			@extend %color-primary;
+			    }
+
+			    @include media-only(small-mobile, max) {
+			    	width: 26px;
+			    	height: 26px;
+			    	line-height: 27px;
+			    	margin-right: 2px;
+			    }
+    		}
+    		&.active {
+				span {
+					font-size: 20px;
+					cursor: default;
+					line-height: 14px;
+	    			@extend %color-primary;
+	    			@extend %bgc-transparent;
+
+                    @include media-only(small-mobile, max) {
+                        line-height: 1.3;
+                    }
+				}
+    		}
+
+            &.page-item:not(.active) {
+                @include media-only(small-mobile, max) {
+                    a {
+                        width: auto;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+
+    		&:first-child,
+    		&:last-child {
+				flex: 1;
+    		}
+
+    		&:first-child {
+    			a {
+    				text-align: left;
+    			}
+
+    			i {
+    				margin-right: 5px;
+    			}
+    		}
+
+    		&:last-child {
+    			a {
+    				text-align: right;
+    				margin-right: 0;
+    			}
+
+    			i {
+    				margin-left: 5px;
+    			}
+    		}
+
+            @include media-only(small-mobile, max) {
+                i {
+                    font-size: 18px;
+                }
+            }
+    	}
+    }
+
+    .page-amount {
+    	justify-content: flex-start;
+
+    	@include respond-to(mobile) {
+			justify-content: flex-start;
+			margin-top: 15px;
+    	}
+
+    	p {
+    		@extend %mb0;
+    	}
+    }
+ }

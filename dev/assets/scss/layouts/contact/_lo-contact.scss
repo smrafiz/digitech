@@ -1,0 +1,110 @@
+/**
+ * Layout Contact
+ *
+ */
+
+.map-location {
+	@extend %slight-rounded;
+	@extend %overflow-hidden;
+}
+
+.contact-form-wrapper {
+	padding: 30px;
+	@extend %slight-rounded;
+	@extend %bgc-offset;
+
+	@include respond-to(mobile) {
+		margin-top: $cx-col-spacing;
+	}
+
+	@include media-only(small-mobile, max) {
+		padding: 20px;
+	}
+
+	input:not([type="submit"]),
+	textarea {
+		border-color: transparent;
+
+		&:focus {
+			@extend %border-primary;
+		}
+	}
+
+	textarea {
+	    min-height: 140px;
+	    padding-top: 12px;
+	}
+
+	.btn.btn-secondary {
+		@extend %bgc-primary;
+		@extend %color-white;
+
+		&:hover {
+			#whole & {
+				@extend %bgc-dark;
+				@extend %color-white;
+			}
+		}
+	}
+
+	::-webkit-input-placeholder{
+	  color: #292929;
+	}
+	::-moz-placeholder{
+	  color: #292929;
+	}
+	:-ms-input-placeholder{
+	  color: #292929;
+	}
+	:-moz-placeholder {
+	  color: #292929;
+	}
+}
+
+#gmap {
+	min-height: 400px;
+}
+
+.feedback-wrapper {
+	.section-heading {
+		h2 {
+		    font-weight: 300;
+		    letter-spacing: 1px;
+		    font-size: 30px;
+		    @extend %color-black;
+		}
+
+		.subtitle {
+		    margin-top: 25px;
+		    font-size: 20px;
+		    font-weight: 300;
+		    line-height: 1.65;
+		}
+	}
+
+	.feedback-socials {
+		h3 {
+		    text-transform: capitalize;
+		    font-size: 24px;
+		    font-weight: normal;
+		    margin-bottom: 20px;
+		    @extend %color-black;
+		}
+
+		.list-inline-item {
+			a {
+			    display: block;
+			    padding: 0;
+			    width: 40px;
+			    height: 40px;
+			    line-height: 44px;
+			    @extend .circle;
+
+			    i {
+				    margin-right: 0;
+				    font-size: 16px;
+			    }
+			}
+		}
+	}
+}

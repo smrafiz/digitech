@@ -1,0 +1,110 @@
+/**
+ * Components Section Title
+ *
+ */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+
+	h2 {
+	    font-size: 14px;
+	    line-height: 30px;
+	    display: inline-block;
+	    font-weight: 700;
+	    @extend %color-primary;
+	    @extend .pos-r;
+	    @extend %mb0;
+
+	    &::before {
+		    content: "";
+		    width: 28px;
+		    height: 3px;
+		    left: -50px;
+		    top: 12px;
+		    z-index: 2;
+		    transform: rotate(135deg);
+		    @extend %bgc-offset;
+		    @extend .pos-a;
+	    }
+
+	    @include respond-to(notebook) {
+			font-size: 20px;
+	    }
+
+	    @include media-only(notebook, max) {
+	    	font-size: 18px;
+	    }
+	}
+
+    &.with-bg {
+		border: 1px solid $cx-border-color;
+	    padding: 15px 0;
+	    padding-left: 20px;
+	    border-top-left-radius: 3px;
+	    border-top-right-radius: 3px;
+	    border-bottom: 0;
+	    @extend %bgc-offset;
+	    @extend %mb0;
+    }
+
+    &.with-icon {
+    	padding-left: 65px;
+    	@extend .pos-r;
+	    &::before {
+		    content: "\f17e";
+		    font-family: "Ionicons";
+		    font-size: 24px;
+		    left: 9px;
+		    line-height: 1;
+		    top: 7px;
+		    color: #fff;
+		    z-index: 2;
+		    @extend .pos-a;
+	    }
+
+	    &::after {
+		    content: "";
+		    left: -1px;
+		    top: -1px;
+		    z-index: 1;
+		    border-top-left-radius: 3px;
+		    border: 30px solid $cx-offset-color;
+		    border-top-color: $cx-primary-color;
+		    border-left-color: $cx-primary-color;
+		    @extend .pos-a;
+	    }
+    }
+
+    .subtitle {
+    	margin-top: 20px;
+    	font-size: 14px;
+    	@extend %color-secondary;
+    	@extend %mb0;
+    }
+
+    &.type-2 {
+    	h2 {
+			@extend %pb0;
+    		@extend %mb0;
+	    	&::before {
+	    		content: none;
+	    	}
+	    }
+    }
+
+    &.left-aligned {
+    	text-align: left;
+    	padding-right: 85px;
+
+    	h2 {
+    		&::before {
+    			margin-left: 0;
+    		}
+    	}
+
+	    &.with-tab-navs {
+	    	padding-right: 450px;
+	    }
+    }
+}

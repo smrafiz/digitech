@@ -1,0 +1,84 @@
+/**
+ * Layout Products Slider
+ *
+ */
+
+// .product-row {
+// 	&.row {
+// 		margin-left: -45px;
+// 		margin-right: -45px;
+// 	}
+// }
+
+.element-carousel {
+	// padding: 15px;
+	// margin-top: -30px;
+	// margin-bottom: -30px;
+	@extend %overflow-hidden;
+
+	&.anime-element {
+		* {
+		    animation-duration: 0.5s;
+		    animation-fill-mode: both;
+		}
+
+		.swiper-slide-visible {
+			animation-delay: 0.1s;
+		    animation-name: zoomIn;
+		}
+	}
+
+	&.anime-element-multi {
+		* {
+		    animation-duration: 0.5s;
+		    animation-fill-mode: both;
+		}
+
+		.swiper-slide-visible {
+			> article {
+				animation-delay: 0.1s;
+			    animation-name: zoomIn;
+			}
+		}
+	}
+
+	// &:hover {
+	// 	.swiper-arrow {
+	// 		top: 50%;
+	// 		opacity: 1;
+	// 	}
+	// }
+
+	&.with-border {
+		border: 1px solid $cx-border-color;
+
+		.product-layout {
+			border-right: 1px solid $cx-border-color;
+			border-bottom: 1px solid $cx-border-color;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+	
+	.custom-row {
+	    display: flex;
+	    flex-wrap: wrap;
+	    margin-right: -10px;
+	    margin-left: -10px;
+	}
+	.custom-col {
+	    flex: 0 0 50%;
+	    max-width: 50%;
+	    padding-right: 10px;
+	    padding-left: 10px;
+	}
+
+	&.with-bottom-margin {
+		margin-bottom: -20px;
+		.product-layout {
+			margin-bottom: 20px;
+		}
+	}
+}

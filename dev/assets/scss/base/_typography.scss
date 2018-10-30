@@ -1,0 +1,294 @@
+html,
+body {
+    font-size: $cx-body-font-size;
+}
+
+body {
+    font-family: $cx-body-font;
+    line-height: $cx-body-line-height;
+    color: $cx-text-color;
+    font-weight: $cx-body-font-weight;
+    background: $cx-body-bg-color;
+}
+
+h1 { 
+    font-size: $cx-h1-font-size;
+}
+
+h2 { 
+    font-size: $cx-h2-font-size;
+}
+
+h3 { 
+    font-size: $cx-h3-font-size;
+}
+
+h4 { 
+    font-size: $cx-h4-font-size; 
+}
+
+h5 { 
+    font-size: $cx-h5-font-size; 
+}
+
+h6 { 
+    font-size: $cx-h6-font-size; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $cx-body-font;
+    font-weight: 500;
+    @extend %color-secondary;
+    @extend %default-heading;    
+}
+
+.fa {
+    font-size: $cx-icon-font-size;
+}
+
+p {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: $cx-heading-margin-bottom;
+}
+
+ul, ol, table, dl, dd {
+    margin-bottom: $cx-heading-margin-bottom;
+}
+
+address, blockquote {
+    font-style: italic;
+}
+
+blockquote {
+    font-size: $cx-body-font-size;
+}
+
+td, th {
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    backface-visibility: hidden;
+}
+
+*:focus{
+    outline: none;
+}
+
+a {
+    @extend %cx-transition;
+    text-decoration: none;
+    @extend %color-secondary;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a:focus, a:active, a:hover {
+    outline: 0 none;
+    text-decoration: none;
+    // @include cx-color(primary, color);
+    @extend %color-primary;
+}
+
+.btn-link {
+    @extend %color-secondary;
+    &:hover,
+    &:focus,
+    &:active {
+        // @include cx-color(primary, color);
+        @extend %color-primary;
+    }
+}
+
+legend {
+    font-size: 18px;
+    padding: 7px 0px
+}
+
+label {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+textarea,
+select,
+input[type="text"],
+input[type="url"],
+input[type="number"],
+input[type="email"],
+input[type="button"],
+input[type="reset"],
+input[type="password"],
+input[type="search"],
+input[type="tel"] {
+    font-size: 12px;
+    box-shadow: none;
+    border-radius: 0;
+    height: 40px;
+    border-color: #ddd;
+    @extend %cx-transition;
+
+    &:focus {
+        box-shadow: none;
+        // @include cx-color(primary, border);
+        @extend %border-primary;
+    }
+}
+
+.form-control {
+    border-radius: 0;
+    &:focus {
+        box-shadow: none;
+        // @include cx-color(primary, border);
+        @extend %border-primary;
+    }
+}
+
+textarea {
+    min-height: 100px;
+}
+
+.input-group,
+.input-group input, 
+.input-group select, 
+.input-group 
+.dropdown-menu, 
+.input-group .popover {
+    font-size: 12px;
+}
+
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+    background: #f4f4f4;
+    color: #444;
+    border: 0;
+    padding: 0 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #444;
+    line-height: 43px;
+    height: 40px;
+    display: inline-block;
+    font-weight: 500;
+    box-shadow: none;
+    cursor: pointer;
+    @extend %slight-rounded;
+    @extend %cx-transition;
+}
+
+select:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    border-color: $cx-secondary-color;
+    outline: 0;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    // @include cx-color(primary, border);
+    // @include cx-color(primary, bg);
+    @extend %border-primary;
+    @extend %bgc-primary;
+}
+
+::-webkit-input-placeholder{
+  color: #292929;
+  font-size: 13px;
+}
+::-moz-placeholder{
+  color: #292929;
+  font-size: 13px;
+}
+:-ms-input-placeholder{
+  color: #292929;
+  font-size: 13px;
+}
+:-moz-placeholder {
+  color: #292929;
+  font-size: 13px;
+}
+
+.nice-select {
+    width: 100%;
+    padding: 0 .75rem;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    border-color: #ddd;
+
+    &:not(.open) {
+        .list {
+            max-height: 0;
+        }
+    }
+
+    .list {
+        max-height: 280px;
+        height: auto;
+        overflow-y: auto;
+        width: 100%;
+
+        .selected {
+            font-weight: 500;
+        }
+
+        .option {
+            @extend %color-black;
+        }
+    }
+
+    span {
+        &.current {
+            // @include cx-default-color(color, black);
+            @extend %color-black;
+        }
+    }
+
+    &::after {
+        content: "\f107";
+        font-family: FontAwesome;
+        border: 0;
+        width: auto;
+        transform-origin: initial;
+        height: 40px;
+        line-height: 40px;
+        transform: rotate(0);
+        top: 4px;
+        right: 15px;
+        font-size: 12px;
+    }
+    
+    &.open {
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+::-webkit-selection {
+    background: $cx-primary-color;
+    text-shadow: none;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: $cx-primary-color;
+    text-shadow: none;
+    color: #fff;
+}
+
+::selection {
+    background: $cx-primary-color;
+    text-shadow: none;
+    color: #fff;
+}

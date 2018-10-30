@@ -1,0 +1,47 @@
+/**
+ * Components Breadcrumbs
+ *
+ */
+
+.breadcrumb {
+	padding: 50px 0;
+    background: none;
+    border-radius: 0;
+	border-bottom: 1px solid #f1f1f2;
+    border-top: 1px solid #f1f1f2;
+    justify-content: center;
+    @extend %mb0;
+
+    .breadcrumb-item {
+    	font-size: 14px;
+    	@extend %color-black;
+    	@extend .pos-r;
+
+		&:hover,
+		&:focus {
+			@extend %color-primary;
+		}
+    	
+    	+ .breadcrumb-item {
+    		padding-left: 30px;
+	    	&::before {
+			    color: #222;
+			    content: "\e684";
+			    font-family: 'Pe-icon-7-stroke';
+			    font-size: 28px;
+			    width: 30px;
+			    height: 24px;
+			    line-height: 24px;
+			    text-align: center;
+			    left: 0;
+			    top: -2px;
+			    @extend .pos-a;
+	    	}
+	    }
+
+	    &.active {
+	    	font-weight: 500;
+	    	@extend %color-primary;
+	    }
+    }
+}

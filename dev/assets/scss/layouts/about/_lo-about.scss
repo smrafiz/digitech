@@ -1,0 +1,52 @@
+/**
+ * Layout About Page
+ *
+ */
+
+.page-about {
+	p {
+		&:not(.lead) {
+			font-size: 14px;
+			line-height: 24px;
+		}
+
+		&:last-of-type {
+			@extend %mb0;
+		}
+	}
+
+	.testimonial-section {
+		margin-bottom: 120px;
+	}
+}
+
+.about-section {
+	.default-btn {
+		@extend %mt-half;
+
+		@include respond-to(mobile) {
+			margin-bottom: 1.1 * $cx-col-spacing;
+		}
+	}
+}
+
+.team-section {
+	.row {
+		.col-6 {
+			@include media-only(small-mobile, max) {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+		}
+	}
+
+	.team-socials {
+		@include media-only(small-mobile, max) {
+			.chain-animation {
+				left: 0;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}

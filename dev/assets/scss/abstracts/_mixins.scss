@@ -1,0 +1,584 @@
+
+//-------------------- Typography --------------------//
+// Usage @include font-face('gotham', '/fonts/gotham', bold, italic);
+
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) { 
+    @font-face {
+        font-family: quote($font-name);
+        src: url($file-name + '.eot');
+        src: url($file-name + '.eot?#iefix')  format('embedded-opentype'),
+             url($file-name + '.woff') format('woff'),
+             url($file-name + '.ttf')  format('truetype'),
+             url($file-name + '.svg##{$font-name}')  format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+
+//-------------------- Vendor Prefix --------------------//
+// Usage @include cx-prefix('transition', 'all 0.3s', moz webkit);
+
+@mixin cx-prefix($property, $value, $vendors: webkit moz ms o, $default: true) {
+    @if $vendors {
+        @each $vendor in $vendors {
+            #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+    }
+    @if $default {
+        #{$property}: #{$value};
+    }
+}
+
+
+//-------------------- Flex --------------------//
+// Usage @include flex(inline-flex);
+
+@mixin flex($property: flex) {
+    display: #{"-webkit-" + $property};
+    display: #{"-moz-" + $property};
+    display: #{"-ms-" + $property};
+    display: #{"-o-" + $property};
+    display: #{$property};
+}
+
+
+//-------------------- Border Radius --------------------//
+// Usage @include border-radius(50%);
+
+@mixin border-radius($radius) {
+    @include cx-prefix('border-radius', $radius);
+}
+
+
+//-------------------- Time Based Transition --------------------//
+// Usage @include cx-transition(all 0.3s);
+
+@mixin cx-transition($transition) {
+    @include cx-prefix('transition', $transition);
+}
+
+
+//-------------------- Box Shadow --------------------//
+// Usage @include cx-box-shadow('0px 2px 5px 0px rgba(0,0,0,0.15)');
+
+@mixin cx-box-shadow($value: '0px 2px 5px 0px rgba(0,0,0,0.15)') {
+    @include cx-prefix('box-shadow', $value);
+}
+
+
+//-------------------- REM conversion --------------------//
+// Usage @include font-size(32px);
+
+@mixin font-size($fsize) {
+    font-size: $fsize;      //Fallback in px
+    font-size: calculateRem($fsize);
+}
+
+
+//-------------------- Cross Browser Opacity --------------------//
+// Usage @include opacity(0.5);
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+//-------------------- Block Element centering --------------------//
+// Usage @include push-center;
+
+@mixin push-center {
+    display: block;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+
+//-------------------- Box Sizing --------------------//
+// Usage @include box-sizing(border-box);
+
+@mixin box-sizing($box-model) {
+    @include cx-prefix('box-sizing', $box-model);
+}
+
+
+//-------------------- Pseudo Positioning --------------------//
+// Usage @include pseudo(block, absolute, ',');
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+
+//-------------------- Absolute Positioning --------------------//
+// Usage @include abs-position(0, 0, 0, 0);
+
+@mixin abs-position($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    @include pseudo ;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+
+//-------------------- Section Overlay --------------------//
+// Usage @include cx-overlay(rgba(0,0,0, 0.75));
+
+@mixin cx-overlay($color:rgba(0,0,0, 0.55)) {
+    &{
+        position: relative;
+    }
+    &::before{
+        background: $color;
+        @include abs-position(0, 0, 0, 0);
+    }
+}
+
+
+//-------------------- Make a Circle --------------------//
+// Usage @include cx-circle(30px, #fff, #333);
+
+@mixin cx-circle($width, $bg, $color) {
+    width: $width;
+    height: $width;
+    display: inline-block;
+    background: $bg;
+    text-align: center;
+    line-height: $width;
+    color: $color;
+    @include border-radius($width/2)
+}
+
+
+//-------------------- Make a Triangle --------------------//
+// Possible $direction Values: up, down, right, left
+// Usage @include cx-triangle(#333, down, 2px, absolute, 10px);
+
+@mixin cx-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){
+    @include pseudo($pos: $position);
+    width: 0;
+    height: 0;
+    @if $round {
+        border-radius: 3px;
+    }
+    @if $direction == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+        margin-top: 0 - round( $size / 2.5 );
+    }
+    @else if $direction == up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+        margin-bottom: 0 - round( $size / 2.5 );
+        } 
+    @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        margin-right: -$size;
+        } 
+    @else if  $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        margin-left: -$size;
+    }
+}
+
+
+//-------------------- Make a Rectangle --------------------//
+// Usage @include box(30px, 30px);
+
+@mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+    text-align: center;
+    line-height: $height;
+    display: inline-block;
+}
+
+
+//-------------------- Equal Height Columns --------------------//
+// Usage @include eqheight;
+
+@mixin eqheight {
+    display: table;
+    width: 100%;
+    & > div {
+        float: none;
+        display: table-cell;
+        vertical-align: middle;
+        @include respond-to(mobile) {
+            display: block;
+        }
+    }
+
+    @include respond-to(mobile) {
+        display: block;
+        width: auto;
+    }
+}
+
+
+//-------------------- Centering --------------------//
+// Possible $position Values: vertical, horizontal, both
+// Usage @include cx-centered(both);
+
+@mixin cx-centered($position) {
+  position: absolute;
+  
+    @if $position == 'vertical' {
+        top: 50%;
+        @include cx-prefix('transform', 'translateY(-50%)');
+    }
+    @else if $position == 'horizontal' {
+        left: 50%;
+        @include cx-prefix('transform', 'translateX(-50%)');
+    }
+    @else if $position == 'both' {
+        top: 50%;
+        left: 50%;
+        @include cx-prefix('transform', 'translate(-50%, -50%)');
+    }
+}
+
+
+//-------------------- Button --------------------//
+// Usage @include button(20px 30px);
+
+@mixin button($padding: 12px 32px){
+    min-width: 165px;
+    padding: $padding;
+    display: inline-block;
+    background: transparent;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-width: 1.2px;
+    border-style: solid;
+    color: $cx-text-color;
+    border-color: $cx-text-color;
+    @extend %cx-transition;
+    &::before {
+        width: 150%;
+        height: 100%;
+        @include abs-position(0, auto, auto, 0);
+    }
+    &:hover {
+        border-color: $cx-link-color;
+        color: $cx-body-bg-color;
+        &::before {
+            background: $cx-link-color;
+        }
+    }
+}
+
+
+//-------------------- input Placeholder --------------------//
+// Usage @include input-placeholder;
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+
+//-------------------- Animation --------------------//
+// Usage @include animation(fade-out 5s 3);
+
+@mixin animation($str) {
+    @include cx-prefix('animation', #{$str});
+}
+
+
+//-------------------- Animation Keyframes --------------------//
+// Usage @include keyframes(fade-out) {};
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    } 
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+
+//-------------------- Retina Images --------------------//
+// Usage @include image-2x("logo2x.png", 100px, 25px);
+
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+        background-image: url($image);
+        background-size: $width $height;
+    }
+}
+
+
+//-------------------- Rotate --------------------//
+// Usage @include transform-rotate(3deg);
+
+@mixin transform-rotate($deg) {
+    @include cx-prefix('transform', rotate(#{$deg}));
+}
+
+
+//-------------------- Horizontal Position --------------------//
+// Usage @include transform-translateX(50%);
+
+@mixin transform-translateX($position) {
+    @include cx-prefix('transform', translateX(#{$position}));
+}
+
+
+//-------------------- Vertical Position --------------------//
+// Usage @include transform-translateY(50%);
+
+@mixin transform-translateY($position) {
+    @include cx-prefix('transform', translateY(#{$position}));
+}
+
+
+//-------------------- V + H Position --------------------//
+// Usage @include transform-translate(50%, 50%);
+
+@mixin transform-translate($positionx, $positiony) {
+    @include cx-prefix('transform', translate(#{$positionx}, #{$positiony}));
+}
+
+
+//-------------------- Background Gradient --------------------//
+// Possible $orientation Values: vertical, horizontal
+// Usage @include background-gradient(#fff, #000, vertical);
+
+@mixin background-gradient($start-color, $end-color, $orientation) { 
+    background: $start-color;
+
+    @if $orientation == 'vertical' {
+        background: -webkit-linear-gradient(top, $start-color, $end-color);
+        background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation == 'horizontal' {
+        background: -webkit-linear-gradient(left, $start-color, $end-color);
+        background: linear-gradient(to right, $start-color, $end-color);
+    } @else {
+        background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+        background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+}
+
+
+//-------------------- Background Gradient Pt 2 --------------------//
+// Usage @include bcg-linear-gradient(45deg, #eee, #000);
+
+@mixin bcg-linear-gradient($degree, $start-color, $end-color) { 
+    background: $start-color;
+    background: -webkit-linear-gradient($degree, $start-color, $end-color);
+    background: -moz-linear-gradient($degree, $start-color, $end-color);
+    background: -ms-linear-gradient($degree, $start-color, $end-color);
+    background: -o-linear-gradient($degree, $start-color, $end-color);
+    background: linear-gradient($degree, $start-color, $end-color);
+}
+
+
+//-------------------- Background Gradient Pt 3 --------------------//
+// Usage @include bcg-linear-gradient2('45deg, #eee, #000', '#eee');
+
+@mixin bcg-linear-gradient2($grad, $start-color) { 
+    background: unquote($start-color);
+    background: -webkit-linear-gradient(unquote($grad));
+    background: -moz-linear-gradient(unquote($grad));
+    background: -ms-linear-gradient(unquote($grad));
+    background: -o-linear-gradient(unquote($grad));
+    background: linear-gradient(unquote($grad));
+}
+
+
+//-------------------- Responsive --------------------//
+// Possible $media Values: small-mobile, modile, large-mobile, tablet, notbook, wide
+// Usage @include respond-to(mobile);
+
+@mixin respond-to($media) {
+
+    @if $media == small-mobile {
+        @media only screen and (max-width: $cx-vsm-screen - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == mobile {
+        @media only screen and (max-width: $cx-sm-screen - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == large-mobile {
+        @media only screen and (min-width: $cx-vsm-screen) and (max-width: $cx-sm-screen - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == tablet {
+        @media only screen and (min-width: $cx-sm-screen) and (max-width: $cx-md-screen - 1) {
+            @content; 
+        }
+    }
+
+    @else if $media == notebook {
+        @media only screen and (min-width: $cx-md-screen) and (max-width: $cx-lg-screen - 1) {
+            @content;
+        }
+    }
+
+    ///* not importent */
+    @else if $media == wide {
+        @media only screen and (min-width: $cx-lg-screen) {
+            @content;
+        }
+    }
+}
+
+
+//-------------------- Responsive Pt 2 --------------------//
+// Possible $type Values: min, max
+// Usage @include media-only(mobile, max);
+
+@mixin media-only($width, $type: min) {
+    @if map_has_key($cx-breakpoints, $width) {
+        $width: map_get($cx-breakpoints, $width);
+    }
+
+    @if $type == max {
+        $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+        @content;
+    }
+    
+}
+
+
+//-------------------- Border --------------------//
+// Usage @include cx-border(1px, 0, 0, 0);
+
+@mixin cx-border($top, $right, $bottom, $left) {
+    border-top: $top solid $cx-border-color;
+    border-right: $right solid $cx-border-color;
+    border-bottom: $bottom solid $cx-border-color;
+    border-left: $left solid $cx-border-color;
+}
+
+
+//-------------------- Background Image --------------------//
+// Usage @include cx-background('img/abc.jpg');
+
+@mixin cx-background($url) {
+    background-image: url($url);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+//-------------------- Line Clamp --------------------//
+// Usage @include cx-truncation(2, #f1f1f1);
+
+@mixin cx-truncation($lines, $line_height, $bg) {
+
+    position: relative;
+    overflow: hidden;
+    line-height: $line_height;
+    max-height: 1em * $line_height * $lines;
+
+    &::after {
+        content: "";
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 30%;
+        height: $line_height+em;
+        background: linear-gradient(to right, rgba($bg, 0), rgba($bg, 1) 50%);
+    }
+
+    @supports (-webkit-line-clamp: $lines) {
+        display: -webkit-box;
+        -webkit-line-clamp: $lines;
+        -webkit-box-orient: vertical; 
+        text-overflow: ellipsis;
+        max-height: 1em * ($line_height) * ($lines + 1);
+
+        &::after {
+            content: none;
+        }
+    }
+}
+
+
+//-------------------- Color Scheme --------------------//
+// Usage @include cx-color(primary, color);
+
+@mixin cx-color($color, $property) {
+
+    $schemes: one two three four;
+
+    @each $current-scheme in $schemes {
+
+        @if $property == color {
+            .color-scheme-#{$current-scheme} & {
+                @extend %#{$color}-#{$property}-#{$current-scheme};
+            }
+        }
+
+        @if $property == bg {
+            .color-scheme-#{$current-scheme} & {
+                @extend %#{$color}-#{$property}-#{$current-scheme};
+            }
+        }
+
+        @if $property == border {
+            .color-scheme-#{$current-scheme} & {
+                @extend %#{$color}-#{$property}-#{$current-scheme};
+            }
+        }
+
+    }
+}
+
+
+//-------------------- Default Color --------------------//
+// Usage @include cx-default-color(color, white);
+
+@mixin cx-default-color($property, $selector) {
+
+    @if $property == color {
+        body & {
+            @extend %color-#{$selector};
+        }
+    }
+
+    @if $property == bgc {
+        body & {
+            @extend %bgc-#{$selector};
+        }
+    }
+
+}

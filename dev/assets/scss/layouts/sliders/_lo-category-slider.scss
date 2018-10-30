@@ -1,0 +1,122 @@
+/**
+ * Layout Category Slider
+ *
+ */
+
+.categories-carousel {
+
+	.media-wrapper {
+	    @extend .pos-r;
+	    @extend %overflow-hidden;
+	    @extend .circle;
+	}
+
+	.media-image {
+		@include media-only(notebook, max) {
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.media-content {
+		position: absolute;
+	    bottom: 10px;
+	    background: rgba(#fff,0.5);
+	    left: 0;
+	    right: 0;
+	    width: 100%;
+	    text-align: center;
+		@extend %cx-transition;
+
+		h2 {
+			font-size: 14px;
+		    font-weight: 400;
+		    text-transform: capitalize;
+			@extend %mb0;
+
+			a {
+			    padding: 10px 0 13px;
+			    display: block;
+				@include cx-default-color(color, black);
+			}
+		}
+	}
+
+	.single-category {
+		&:hover {
+			.media-content {
+				@include cx-color(primary, bg);
+			}
+			h2 {
+				a {
+					@include cx-default-color(color, white);
+				}
+			}
+		}
+	}
+
+	.single-category-2 {
+	    border: 1px solid $cx-border-color;
+	    padding: 10px;
+	    @extend %overflow-hidden;
+	    @extend %mb-half;
+	    @extend .pos-r;
+	    @extend %rounded-corners;
+
+	    @include media-only(wide, max) {
+	    	padding: 15px;
+	    	flex-wrap: wrap;
+	    }
+
+	    .media-image {
+	    	width: 170px;
+
+	    	img {
+	    		width: 100%;
+	    	}
+	    	@include media-only(wide, max) {
+	    		width: 100%;
+	    	}
+	    }
+
+	    .media-body {
+	    	h2 {
+	    		margin-bottom: 15px;
+
+	    		a {
+	    			@include cx-default-color(color, dark);
+				    font-size: 16px;
+				    font-weight: 400;
+				    text-transform: uppercase;
+	    		}
+	    	}
+			
+			ul {
+		    	> li {
+		    		margin-bottom: 6px;
+
+		    		&:last-child {
+		    			@extend %mb0;
+		    		}
+		    	}
+		    }
+
+			a {
+			    font-size: 14px;
+			    font-weight: 300;
+			    text-transform: capitalize;
+			    @include cx-default-color(color, black);
+			    &:hover,
+			    &:active {
+			    	padding-left: 5px;
+			    	@include cx-color(primary, color);
+			    }
+			}
+
+	    	@include media-only(wide, max) {
+    		    margin-top: $cx-col-spacing;
+	    	}
+	    }
+	}
+}

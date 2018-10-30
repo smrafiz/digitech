@@ -1,0 +1,94 @@
+/**
+ * Components Accordion
+ *
+ */
+
+.faqs-accordion {
+	.card {
+		border-top: 0;
+	    border-radius: 0;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	.card-header {
+		padding: 0;
+		border-bottom: 0;
+		@extend %bgc-offset;
+
+		button {
+			display: block;
+			text-align: left;
+			width: 100%;
+			height: auto;
+			padding: 15px 35px 15px 25px;
+		    position: relative;
+		    box-shadow: none;
+		    border-radius: 0;
+		    font-size: 14px;
+			text-transform: capitalize;
+		    font-weight: 500;
+		    border-top: 1px solid rgba(0, 0, 0, 0.125);
+		    white-space: initial;
+		    @extend .pos-r;
+
+		    @include respond-to(mobile) {
+		    	padding-left: 15px;
+		    }
+
+		    &:hover,
+		    &:focus {
+		    	text-decoration: none;
+		    	border-color: transparent;
+				color: inherit;
+				border-top-color: rgba(0, 0, 0, 0.125);
+				@extend %bgc-offset;
+		    }
+
+		    &::after {
+			    content: "\f107";
+			    font-family: FontAwesome;
+			    right: 15px;
+			    height: 20px;
+			    top: 50%;
+			    margin-top: -10px;
+			    font-weight: bold;
+			    backface-visibility: hidden;
+			    transition: transform 0.3s;
+			    @extend .pos-a
+		    }
+
+		    &[aria-expanded="true"] {
+		    	text-decoration: none;
+		    	@extend %bgc-primary;
+		    	@extend %border-primary;
+		    	@extend %color-white;
+
+		    	&::after {
+		    		transform: rotate(180deg);
+		    	}
+
+		    	&:hover,
+		    	&:focus {
+			    	@extend %bgc-primary;
+			    	@extend %border-primary;
+			    	@extend %color-white;
+		    	}
+		    }
+		}
+	}
+
+	.card-body {
+		padding: 25px;
+	    @include respond-to(mobile) {
+	    	padding: 15px;
+	    }
+
+		p {
+			&:last-of-type {
+				@extend %mb0;
+			}
+		}
+	}
+}

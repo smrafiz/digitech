@@ -1,0 +1,292 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	@include box-sizing(border-box);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+section {
+	margin-bottom: $cx-section-spacing;
+	display: block;
+	width: 100%;
+	float: none;
+	clear: both;
+	@include respond-to(mobile) {
+		margin-bottom: $cx-section-spacing-mob;
+	}
+}
+
+.lead {
+	font-size: 16px;
+	line-height: 1.65;
+	margin-bottom: 20px;
+}
+
+.main-content-wrapper {
+	overflow-x: hidden;
+	@extend %clearfix;
+}
+
+#primary,
+#secondary {
+	margin-bottom: $cx-section-spacing;
+	@include respond-to(mobile) {
+		margin-bottom: $cx-section-spacing-mob;
+	}
+}
+
+#secondary {
+	@extend %overflow-hidden;
+}
+
+.pswp {
+	z-index: 9999;
+}
+
+.pswp__counter {
+	@extend %visuallyhidden;
+}
+
+.row {
+	&.with-border {
+	    padding: 30px;
+	    border: 1px solid $cx-border-color;
+	    @extend %rounded-corners;
+	}
+}
+
+.pswp__caption__center {
+	text-align: center;
+}
+
+/* Modal Fixes */
+
+.modal-open .main-nav-area.sticky {
+  overflow-y: scroll;
+}
+
+.modal-open #to_top {
+	@extend .visually-hidden;
+}
+
+/* Slider blurry texts fix for -webkit */
+
+.swiper-wrapper,
+.swiper-slide,
+.swiper-slide * {
+	background: rgba(0, 0, 0, 0);
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Hides an element */
+
+.visually-hidden {
+	@extend %visuallyhidden;
+}
+
+/* global notice */
+
+.browserupgrade {
+	padding: 50px;
+	background: #dedede;
+	font-size: 20.5px;
+	text-align: center;
+}
+
+/* Border classes */
+
+.rb-bordered {
+	@extend %cx-right-bottom-border;
+}
+
+.tr-bordered {
+	@extend %cx-top-right-border;
+}
+
+.bl-bordered {
+	@extend %cx-bottom-left-border;
+}
+
+.lt-bordered {
+	@extend %cx-left-top-border;
+}
+
+.top-bordered {
+	@extend %cx-top-border;
+}
+
+.right-bordered {
+	@extend %cx-right-border;
+}
+
+.bottom-bordered {
+	@extend %cx-bottom-border;
+}
+
+.left-bordered {
+	@extend %cx-left-border;
+}
+
+
+/* section zero margin & padding */
+
+.vmargin {
+	@extend %vmargin;
+}
+
+.mb0 {
+	@extend %mb0;
+}
+
+.pb0 {
+	@extend %pb0;
+}
+
+.mt0 {
+	@extend %mt0;
+}
+
+.pt0 {
+	@extend %pt0;
+}
+
+.nomargin {
+	@extend %margin-0;
+}
+
+/* full margin & padding */
+
+.vpadding {
+	@extend %vpadding;
+}
+
+.nopadding {
+	@extend %padding-0;
+}
+
+.mt-full {
+	@extend %mt-full;
+}
+
+.mb-full {
+	@extend %mb-full;
+}
+
+.pt-full {
+	@extend %pt-full;
+}
+
+.pb-full {
+	@extend %pb-full;
+}
+
+/* half padding & margin */
+
+.mt-half {
+	@extend %mt-half;
+}
+
+.mb-half {
+	@extend %mb-half;
+}
+
+.pt-half {
+	@extend %pt-half;
+}
+
+.pb-half {
+	@extend %pb-half;
+}
+
+/* Section with padding */
+
+.wrapper-with-right-padding {
+	padding-right: $cx-heading-margin-bottom;
+	@include media-only(notebook, max) {
+		padding-right: 0;
+	}
+}
+
+.wrapper-with-left-padding {
+	padding-left: $cx-heading-margin-bottom;
+	@include media-only(notebook, max) {
+		padding-left: 0;
+	}
+}
+
+/* Speical Padding & Margin */
+
+.mt-30 {
+	margin-top: 30px;
+}
+
+.mb-30 {
+	margin-bottom: 30px;
+}
+
+.pt-30 {
+	padding-top: 30px;
+}
+
+.pb-30 {
+	padding-bottom: 30px;
+}
+
+/* Border-radius */
+
+.rounded-corners {
+	@extend %rounded-corners;
+}
+
+.circle {
+	@include border-radius(50%);
+}
+
+/* Equal height by display: table */
+
+.eqheight {
+	@extend %eqheight;
+}
+
+/* Overflow */
+
+.oflow-hidden {
+	@extend %overflow-hidden;
+}
+
+/* Position */
+
+.pos-r {
+	position: relative;
+}
+
+.pos-a {
+	position: absolute;
+}
+
+/* Tooltips */
+
+.tooltip {
+	z-index: 9950;
+	.arrow{
+		&::before {
+			border-top-color: $cx-secondary-color;
+		}
+	}
+
+	.tooltip-inner {
+		@extend %bgc-secondary;
+	}
+
+	.modal-open & {
+		z-index: 9990;
+	}
+}
+
+

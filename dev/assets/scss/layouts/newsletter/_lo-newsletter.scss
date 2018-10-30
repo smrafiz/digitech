@@ -1,0 +1,135 @@
+/**
+ * Layout Newsletter
+ *
+ */
+
+.newsletter-section {
+	.newsletter-title {
+		h6 {
+		    font-weight: 400;
+		    font-size: 24px;
+		    margin: 0;
+		    text-transform: inherit;
+		    line-height: 28px;
+		    flex: 0 0 30%;
+		    max-width: 30%;
+		    @extend %color-black;
+		}
+
+		h3 {
+		    font-size: 14px;
+		    margin: 5px 0 0 50px;
+		    text-transform: inherit;
+		    font-weight: 400;
+		    float: left;
+		    line-height: 24px;
+		    flex: 0 0 60%;
+		    max-width: 60%;
+		    @extend %color-black;
+		}
+	}
+
+	.newsletter-form-wrapper {
+		form {
+		    display: block;
+		    width: 100%;
+		    @extend .pos-r;
+		}
+		input {
+			&[type="email"] {
+			    border: 1px solid #f0f0f0;
+			    font-size: 14px;
+			    color: #999999;
+			    display: block;
+			    padding: 0 130px 0 30px;
+			    height: 48px;
+			    line-height: 46px;
+			    width: 100%;
+			    border-radius: 17px;
+			    @extend %bgc-white;
+			    @extend %cx-transition;
+
+			    &:active,
+			    &:focus {
+			    	@extend %border-primary;
+			    }
+
+			    @include media-only(small-mobile, max) {
+		    	    padding-right: 30px;
+			    }
+			}
+
+			&[type="submit"] {
+			    padding: 0 20px;
+			    height: 48px;
+			    line-height: 48px;
+			    right: 0;
+			    top: 0;
+			    text-transform: capitalize;
+			    font-weight: 400;
+			    border-radius: 17px;
+			    @extend .pos-a;
+			    @extend %bgc-primary;
+			    @extend %color-white;
+
+			    &:hover {
+			    	@extend %bgc-dark;
+			    }
+
+			    @include media-only(small-mobile, max) {
+				    position: static;
+				    margin-top: 15px;
+				    width: 100%;
+			    }
+			}
+		}
+
+		::-webkit-input-placeholder{
+		  color: #333;
+		}
+		::-moz-placeholder{
+		  color: #333;
+		}
+		:-ms-input-placeholder{
+		  color: #333;
+		}
+		:-moz-placeholder {
+		  color: #333;
+		}
+	}
+
+	@include media-only(notebook, max) {
+		text-align: center;
+		
+		.newsletter-title {
+			h6,
+			h3 {
+				flex-basis: 100%;
+				max-width: 100%;
+			}
+
+			h3 {
+				margin-top: 20px;
+				margin-left: 0;
+			}
+		}
+
+		.newsletter-form-wrapper {
+			margin-top: 20px;
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.color-scheme-two & {
+		input {
+			&[type="submit"] {
+				@extend %color-dark;
+				&:hover {
+					@extend %color-white;
+				}
+			}
+		}
+	}
+}

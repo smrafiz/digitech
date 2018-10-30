@@ -1,0 +1,65 @@
+/**
+ * Components Comments
+ *
+ */
+
+.comments-area {
+	h3 {
+	    text-transform: initial;
+	    font-size: 20px;
+	}
+
+	.comment-single {
+		@extend %mt-half;
+	}
+
+	.comment-meta {
+		h6 {
+			font-size: 15px;
+			margin-bottom: 5px;
+			text-transform: capitalize;
+
+			+ span {
+			    @extend %color-dark;
+			}
+		}
+	}
+
+	.comment-reply {
+		a {
+		    font-size: 12px;
+		    font-weight: 500;
+		    text-transform: capitalize;
+		}
+	}
+
+	.comment-content {
+		padding: 20px;
+		@extend %bgc-offset;
+		> p {
+			margin-top: 10px;
+		}
+	}
+
+	.comment-list {
+		&.nested {
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+	::-webkit-input-placeholder{
+	  color: #292929;
+	}
+	::-moz-placeholder{
+	  color: #292929;
+	}
+	:-ms-input-placeholder{
+	  color: #292929;
+	}
+	:-moz-placeholder {
+	  color: #292929;
+	}
+}

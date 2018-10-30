@@ -1,0 +1,128 @@
+/**
+ * Components Instagram
+ *
+ */
+
+.instagram-container {
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    @extend %overflow-hidden;
+    @extend .pos-r;
+
+	.swiper-slide {
+		@extend %mb0;
+
+		a {
+			display: block;
+		    @extend %overflow-hidden;
+		    @extend .pos-r;
+
+		    &::before {
+			    content: "";
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+			    background-color: rgba(0,0,0,.8);
+			    transform: scale3d(1.2, 1.2, 1.2);
+			    opacity: 0;
+			    @extend %cx-transition;
+			    @extend .pos-a;
+		    }
+
+		    &::after {
+			    content: "\f16d";
+			    font-family: FontAwesome;
+			    font-size: 18px;
+			    width: 68px;
+			    height: 68px;
+			    line-height: 68px;
+			    top: 50%;
+			    left: 50%;
+			    margin-top: -34px;
+			    margin-left: -34px;
+			    opacity: 0;
+			    text-align: center;
+			    @extend %color-white;
+			    @extend %cx-transition;
+			    @extend .pos-a;
+		    }
+		}
+
+		&:hover {
+			a {
+				&::before {
+				    transform: scale3d(1, 1, 1);
+				    opacity: 1;
+				    z-index: 2;
+				}
+
+				&::after {
+				    opacity: 1;
+				    z-index: 3;
+				    animation: zoomIn 0.3s ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+.follow-link {
+    text-align: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    line-height: 1;
+    @extend .pos-r;
+    @extend %mt-half;
+
+    > a {
+	    display: inline-block;
+	    padding: 0 20px;
+	    font-size: 12px;
+	    text-transform: uppercase;
+	    font-weight: 500;
+    }
+
+    &::before,
+    &::after {
+    	content: "";
+    	display: block;
+    	height: 1px;
+    	margin: 0 auto;
+    	text-align: center;
+    	top: 50%;
+    	width: 41%;
+    	@extend .pos-a;
+
+    	@include respond-to(tablet) {
+    		width: 38%;
+    	}
+
+    	@include respond-to(mobile) {
+			content: none;
+    	}
+    }
+
+    &::before {
+    	background: url(../images/backgrounds/left-bg.png);
+    	left: 0;
+    }
+
+    &::after {
+    	background: url(../images/backgrounds/right-bg.png);
+    	right: 0;
+    	width: 41%;
+
+    	@include respond-to(tablet) {
+    		width: 38%;
+    	}
+
+    	@include respond-to(mobile) {
+			content: none;
+    	}
+    }
+}
+
+

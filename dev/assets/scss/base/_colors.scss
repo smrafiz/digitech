@@ -1,0 +1,245 @@
+// Color helpers
+
+%color-primary {
+	color: $cx-primary-color;
+}
+
+%color-secondary {
+	color: $cx-secondary-color;
+}
+
+%color-tertiary {
+	color: $cx-tertiary-color;
+}
+
+%color-transparent {
+	color: transparent;
+}
+
+%color-offset {
+	color: $cx-offset-color;
+}
+
+%color-white {
+	color: lighten($cx-text-color, 100%);
+}
+
+%color-dark {
+	color: #252525;
+}
+
+%color-black {
+	color: #000;
+}
+
+%bgc-primary {
+	background-color: $cx-primary-color;
+}
+
+%bgc-secondary {
+	background-color: $cx-secondary-color;
+}
+
+%bgc-tertiary {
+	background-color: $cx-tertiary-color;
+}
+
+%bgc-transparent {
+	background-color: transparent;
+}
+
+%bgc-offset {
+	background-color: $cx-offset-color;
+}
+
+%bgc-white {
+	background-color: lighten($cx-text-color, 100%);
+}
+
+%bgc-dark {
+	background-color: #252525;
+}
+
+%bgc-black {
+	background-color: #000;
+}
+
+%border-primary {
+	border-color: $cx-primary-color;
+}
+
+%border-secondary {
+	border-color: $cx-secondary-color;
+}
+
+%border-tertiary {
+	border-color: $cx-tertiary-color;
+}
+
+%border-default {
+	border-color: $cx-border-color;
+}
+
+%border-offset {
+	border-color: $cx-offset-color;
+}
+
+%border-black {
+	border-color: #000;
+}
+
+
+
+// Color Schemes
+
+.color-primary {
+	@extend %color-primary;
+}
+
+.color-secondary {
+	@extend %color-secondary;
+}
+
+.color-tertiary {
+	@extend %color-tertiary;
+}
+
+.color-transparent {
+	@extend %color-transparent;
+}
+
+.color-offset {
+	@extend %color-offset;
+}
+
+.color-white {
+	@extend %color-white;
+}
+
+.color-dark {
+	@extend %color-dark;
+}
+
+.color-black {
+	@extend %color-black;
+}
+
+.bgc-primary {
+	@extend %bgc-primary;
+}
+
+.bgc-secondary {
+	@extend %bgc-secondary;
+}
+
+.bgc-tertiary {
+	@extend %bgc-tertiary;
+}
+
+.bgc-transparent {
+	@extend %bgc-transparent;
+}
+
+.bgc-offset {
+	@extend %bgc-offset;
+}
+
+.bgc-white {
+	@extend %bgc-white;
+}
+
+.bgc-dark {
+	@extend %bgc-dark;
+}
+
+.bgc-black {
+	@extend %bgc-black;
+}
+
+.border-primary {
+	@extend %border-primary;
+}
+
+.border-secondary {
+	@extend %border-secondary;
+}
+
+.border-tertiary {
+	@extend %border-tertiary;
+}
+
+.border-default {
+	@extend %border-default;
+}
+
+.border-offset {
+	@extend %border-offset;
+}
+
+.border-black {
+	@extend %border-black;
+}
+
+
+/* Social Media Colors */
+
+.bg-facebook {
+	background: $facebook-color;
+	@extend %color-white;
+	&:hover,
+	&:focus {
+		background: darken($facebook-color, 10%);
+		@extend %color-white;
+	}
+}
+
+.bg-twitter {
+	background: $twitter-color;
+	@extend %color-white;
+	&:hover,
+	&:focus {
+		background: darken($twitter-color, 10%);
+		@extend %color-white;
+	}
+}
+
+.bg-gplus {
+	background: $gplus-color;
+	@extend %color-white;
+	&:hover,
+	&:focus {
+		background: darken($gplus-color, 10%);
+		@extend %color-white;
+	}
+}
+
+.bg-pinterest {
+	background: $pinterest-color;
+	@extend %color-white;
+	&:hover,
+	&:focus {
+		background: darken($pinterest-color, 10%);
+		@extend %color-white;
+	}
+}
+
+.bg-instagram {
+	background: $instagram-color;
+	@extend %color-white;
+	&:hover,
+	&:focus {
+		background: darken($instagram-color, 10%);
+		@extend %color-white;
+	}
+}
+
+.bg-linkedin {
+	background: $linkedin-color;
+	@extend %color-white;
+	&:hover,
+	&:focus {
+		background: darken($linkedin-color, 10%);
+		@extend %color-white;
+	}
+}
+
