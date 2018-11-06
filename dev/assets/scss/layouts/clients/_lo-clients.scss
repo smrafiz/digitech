@@ -4,18 +4,22 @@
  */
 
 .clients {
-    padding: 5px;
-    border: 1px solid $cx-border-color;
-    @extend %slight-rounded;
-	@extend %overflow-hidden;
+    // padding: 5px;
+    // border: 1px solid $cx-border-color;
+ //    @extend %slight-rounded;
+	// @extend %overflow-hidden;
+
+	.item-brand {
+		text-align: center;
+	}
 
 	img {
-		width: 100%;
-		opacity: 0.8;
+	    display: inline-block;
+	    width: auto;
 		@extend %cx-transition;
 
 		&:hover {
-			opacity: 1;
+			transform: scale(1.1);
 		}
 	}
 }

@@ -1,0 +1,81 @@
+/**
+ * Components Products Categories
+ *
+ */
+
+.single-category {
+	padding: 20px;
+	// border-right: 1px solid $cx-border-color;
+
+	.category-image {
+		margin-bottom: 20px;
+		@extend .oflow-hidden;
+		@extend %slight-rounded;
+
+		a {
+			display: block;
+		}
+
+		img {
+			width: 100%;
+			@extend %cx-transition;
+		}
+	}
+
+	.category-content {
+		h2 {
+			a {
+			    font-size: 14px;
+			    display: block;
+			    font-weight: 500;
+			    text-transform: capitalize;
+			    margin-bottom: 20px;
+			    @extend %color-primary;
+			}
+		}
+
+		.sub-featured-categories {
+		    @extend %mb0;
+
+			li {
+				a {
+				    display: block;
+				    font-size: 13px;
+				    line-height: 24px;
+				    @extend %color-dark;
+
+				    &:hover {
+				    	padding-left: 3px;
+						@extend %color-primary;
+				    }
+				}
+			}
+		}
+
+		.view-more {
+		    line-height: 30px;
+		    height: 30px;
+		    padding: 0 20px;
+		    text-transform: capitalize;
+		    background: #f1f1f1;
+		    display: inline-block;
+		    vertical-align: top;
+		    margin-top: 20px;
+		    @extend %color-dark;
+		    @extend %slight-rounded;
+
+		    &:hover {
+		    	@extend %bgc-primary;
+		    	@extend %color-white;
+		    }
+		}
+	}
+
+	&:hover {
+		.category-image {
+			img {
+			    transform: scale3d(1.05, 1.05, 1.05);
+			}
+		}
+	}
+}

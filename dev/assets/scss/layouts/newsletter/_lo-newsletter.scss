@@ -3,29 +3,49 @@
  *
  */
 
-.newsletter-section {
+.footer-newsletter-section {
+	background: #085293;
+	padding: 35px 0;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+
 	.newsletter-title {
-		h6 {
-		    font-weight: 400;
-		    font-size: 24px;
-		    margin: 0;
-		    text-transform: inherit;
-		    line-height: 28px;
-		    flex: 0 0 30%;
-		    max-width: 30%;
-		    @extend %color-black;
+	    padding-left: 80px;
+	    margin: 10px 0;
+	    display: inline-block;
+	    vertical-align: top;
+	    @extend .pos-r;
+
+		&::before {
+			content: "\f33e";
+		    font-size: 72px;
+		    font-family: "Ionicons";
+		    left: 0;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    @extend %color-white;
+		    @extend .pos-a;
 		}
 
 		h3 {
-		    font-size: 14px;
-		    margin: 5px 0 0 50px;
+		    font-weight: 500;
+		    font-size: 24px;
+		    margin: 0;
+		    text-transform: inherit;
+		    line-height: 1;
+		    margin-bottom: 10px;
+		    // flex: 0 0 30%;
+		    // max-width: 30%;
+		    @extend %color-white;
+		}
+
+		h6 {
+		    font-size: 13px;
 		    text-transform: inherit;
 		    font-weight: 400;
-		    float: left;
-		    line-height: 24px;
-		    flex: 0 0 60%;
-		    max-width: 60%;
-		    @extend %color-black;
+		    // flex: 0 0 60%;
+		    // max-width: 60%;
+		    @extend %mb0;
+		    @extend %color-white;
 		}
 	}
 
@@ -41,11 +61,11 @@
 			    font-size: 14px;
 			    color: #999999;
 			    display: block;
-			    padding: 0 130px 0 30px;
-			    height: 48px;
-			    line-height: 46px;
+			    padding: 0 170px 0 30px;
+			    height: 56px;
+			    line-height: 56px;
 			    width: 100%;
-			    border-radius: 17px;
+			    @extend %slight-rounded;
 			    @extend %bgc-white;
 			    @extend %cx-transition;
 
@@ -61,13 +81,15 @@
 
 			&[type="submit"] {
 			    padding: 0 20px;
-			    height: 48px;
-			    line-height: 48px;
+			    height: 56px;
+			    line-height: 56px;
 			    right: 0;
 			    top: 0;
-			    text-transform: capitalize;
-			    font-weight: 400;
-			    border-radius: 17px;
+			    font-size: 12px;
+			    text-transform: uppercase;
+			    font-weight: 500;
+			    border-top-left-radius: 0;
+			    border-bottom-left-radius: 0;
 			    @extend .pos-a;
 			    @extend %bgc-primary;
 			    @extend %color-white;

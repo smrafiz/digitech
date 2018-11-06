@@ -52,8 +52,17 @@
 	&.with-border {
 		border: 1px solid $cx-border-color;
 
+		.visible-not-last {
+			.single-category,
+			.product-layout,
+			&.product-layout {
+				border-right: 1px solid $cx-border-color;
+			}
+		}
+	}
+
+	&.with-bottom-border {
 		.product-layout {
-			border-right: 1px solid $cx-border-color;
 			border-bottom: 1px solid $cx-border-color;
 
 			&:last-child {

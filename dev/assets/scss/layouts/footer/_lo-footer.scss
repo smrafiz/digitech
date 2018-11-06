@@ -3,10 +3,26 @@
  *
  */
 
+#colophon {
+	background: #085293;
+
+	&.dark-footer {
+		h1, h2, h3, h4, h5, h6, p, span, li, a {
+			@extend %color-white;
+		}
+
+		a:hover,
+		a:focus {
+			color: #699ecd;
+		}
+	}
+}
+
 .footer-widgets-area {
 	.footer-inner {
-		border-bottom: 1px solid #303030;
+		// border-bottom: 1px solid #303030;
 		@extend %pb-full;
+		@extend %pt-full;
 
 		@include media-only(notebook, max) {
 			padding-bottom: 20px;
@@ -90,8 +106,10 @@
 }
 
 .footer-copyright {
-	padding: 20px 0;
+	border-top: 1px solid rgba(255,255,255,0.1);
 	color: #808080;
+	@extend %pt-half;
+	@extend %pb-half;
 
 	p {
 		font-size: 14px;
@@ -102,39 +120,62 @@
 		@extend %color-primary;
 
 		&:hover {
+			text-decoration: underline;
 			@extend %color-white;
-		}
-	}
-
-	.footer-payment {
-		text-align: right;
-
-		ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-
-			li {
-				display: inline-block;
-			    margin-left: 10px;
-
-				@include media-only(small-mobile, max) {
-					margin-left: 5px;
-				}
-
-			    &:first-child {
-			    	margin-left: 0;
-			    }
-			}
 		}
 	}
 
 	@include media-only(notebook, max) {
 		text-align: center;
+	}
+}
 
-		.footer-payment {
-			margin-top: 20px;
-			text-align: center;
+#colophon .social-widget {
+	display: flex;
+	justify-content: flex-end;
+
+	.list-inline {
+		li.list-inline-item {
+			@extend %mb0;
 		}
+
+		a {
+		    color: #2f81c9;
+		    background: #105fa5;
+		    @extend %slight-rounded;
+
+		    &:hover {
+		    	@extend %color-white;
+
+		    	&.bg-facebook {
+		    		background: $facebook-color;
+		    	}
+
+		    	&.bg-twitter {
+					background: $twitter-color;
+				}
+
+				&.bg-gplus {
+					background: $gplus-color;
+				}
+
+				&.bg-pinterest {
+					background: $pinterest-color;
+				}
+
+				&.bg-instagram {
+					background: $instagram-color;
+				}
+
+				&.bg-linkedin {
+					background: $linkedin-color;
+				}
+		    }
+		}
+	}
+
+	@include media-only(notebook, max) {
+		margin-top: 20px;
+		justify-content: center;
 	}
 }

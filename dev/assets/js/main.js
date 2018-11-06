@@ -337,6 +337,13 @@ INDEX:
                                 delay: 5000
                             }
                         }
+                    },
+
+                    on: {
+                        slideChange: function () {
+                            $('.swiper-slide.swiper-slide-visible').removeClass('visible-not-last');
+                            $('.swiper-slide.swiper-slide-visible').prev().addClass('visible-not-last');
+                        },
                     }
                 });
             });
