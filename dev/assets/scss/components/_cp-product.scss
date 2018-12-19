@@ -5,85 +5,77 @@
 
 .gallery-with-thumbs {
 
-	display: flex;
-	flex-wrap: wrap;
+	// display: flex;
+	// flex-wrap: wrap;
 
-	.product-thumb-container {
-		order: 1;
-		flex: 0 0 100px;
-		max-width: 100px;
+	// .product-thumb-container {
+	// 	order: 1;
+	// 	flex: 0 0 100px;
+	// 	max-width: 100px;
 
-		@include media-only(notebook, max) {
-			order: 2;
-			flex-basis: 100%;
-			max-width: 100%;
-		}
-	}
+	// 	@include media-only(notebook, max) {
+	// 		order: 2;
+	// 		flex-basis: 100%;
+	// 		max-width: 100%;
+	// 	}
+	// }
 
-	.product-image-container {
-	    max-width: calc(100% - 100px);
-		order: 2;
+	// .product-image-container {
+	//     max-width: calc(100% - 100px);
+	// 	order: 2;
 
-		@include media-only(notebook, max) {
-			order: 1;
-			max-width: 100%;
-			margin-bottom: 15px;
-		}
-	}
+	// 	@include media-only(notebook, max) {
+	// 		order: 1;
+	// 		max-width: 100%;
+	// 		margin-bottom: 15px;
+	// 	}
+	// }
+
+	// .swiper-arrow {
+	// 	&.prev {
+	// 		left: -21px;
+	// 	}
+
+	// 	&.next {
+	// 		right: -21px;
+	// 	}
+	// }
 
 	.swiper-arrow {
-		left: 43%;
-		transform: translateX(-50%);
-		height: 30px;
-		line-height: 0;
-		margin: 0;
-
-		@include media-only(notebook, max) {
-		    margin-top: -15px;
-		    transform: rotate(-90deg);
+	    border: 1px solid $cx-border-color;
+	    opacity: 0;
+	    margin-top: -23px;
+	    top: 50%;
+	    @extend .pos-a;
+	    @extend .circle;
+	    @extend %bgc-white;
+		&.prev {
+			left: -21px;
 		}
 
 		&.next {
-			top: auto;
-			bottom: 30px;
-
-			@include media-only(wide, max) {
-				bottom: -5px;
-			}
-
-			@include media-only(notebook, max) {
-				right: -5px;
-				bottom: auto;
-				top: 50%;
-				left: auto;
-			}
-		}
-
-		&.prev {
-			top: 30px;
-
-			@include media-only(wide, max) {
-				top: -5px;
-			}
-
-			@include media-only(notebook, max) {
-				left: -5px;
-				top: 50%;
-				right: auto;
-			}
+			right: -21px;
 		}
 
 		i {
-		    font-size: 30px;
+			font-size: 14px;
+		}
+
+		&:hover {
+			@extend %bgc-primary;
+			@extend %border-primary;
+			@extend %color-white;
 		}
 	}
 
 	.main-slider {
 		@extend %overflow-hidden;
 		.swiper-slide {
-			@extend %mb0;
+			margin-bottom: 15px;
+
 			> a {
 				display: block;
+				border: 1px solid $cx-border-color;
 				@extend .pos-r;
 
 				&:hover {
@@ -117,57 +109,68 @@
 	}
 
 	.nav-slider {
-		padding-right: 15px;
+		// padding-right: 15px;
 		@extend %overflow-hidden;
 
-		@include media-only(notebook, max) {
-			padding-right: 0;
-		}
+		// @include media-only(notebook, max) {
+		// 	padding-right: 0;
+		// }
 
 		.swiper-slide {
+			border: 1px solid $cx-border-color;
 			@extend %cx-transition;
+
+			&.swiper-slide-active {
+				@extend %border-primary;
+			}
 
 			&:hover {
 				@extend %border-primary;
 			}
 
-			img {
-				width: auto;
-				height: 100%;
-				opacity: 0.3;
-				@extend %cx-transition;
+			// img {
+			// 	width: auto;
+			// 	height: 100%;
+			// 	opacity: 0.3;
+			// 	@extend %cx-transition;
 
-				@include media-only(notebook, max) {
-					width: 100%;
-					height: auto;
-				}
-			}
+			// 	@include media-only(notebook, max) {
+			// 		width: 100%;
+			// 		height: auto;
+			// 	}
+			// }
 
-			&:hover,
-			&.swiper-slide-active {
-				img {
-					opacity: 1;
-				}
-			}
+			// &:hover,
+			// &.swiper-slide-active {
+			// 	img {
+			// 		opacity: 1;
+			// 	}
+			// }
 		}
+
+		// &:hover {
+		// 	.swiper-arrow {
+		// 		opacity: 1;
+
+		// 		&.next {
+		// 			bottom: -5px;
+		// 			@include media-only(notebook, max) {
+		// 				bottom: auto;
+		// 			}
+		// 		}
+
+		// 		&.prev {
+		// 			top: -5px;
+		// 			@include media-only(notebook, max) {
+		// 				top: 50%;
+		// 			}
+		// 		}
+		// 	}
+		// }
 
 		&:hover {
 			.swiper-arrow {
 				opacity: 1;
-
-				&.next {
-					bottom: -5px;
-					@include media-only(notebook, max) {
-						bottom: auto;
-					}
-				}
-
-				&.prev {
-					top: -5px;
-					@include media-only(notebook, max) {
-						top: 50%;
-					}
-				}
 			}
 		}
 	}
@@ -522,6 +525,14 @@
 .product-price {
 	margin-bottom: 15px;
 
+	> span {
+		&:first-child {
+			@include respond-to(notebook) {
+				display: none;
+			}
+		}
+	}
+
 	> p {
 		> span {
 			&:not(:last-child) {
@@ -620,6 +631,11 @@
 		    &.btn-cart {
 		    	min-width: 135px;
 	    	    padding: 0 30px;
+
+	    	    @include respond-to(notebook) {
+	    	    	min-width: 100px;
+	    	    	padding: 0 10px;
+	    	    }
 		    }
 
 		    &.btn-wishlist,

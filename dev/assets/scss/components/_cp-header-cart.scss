@@ -92,7 +92,7 @@
 	    }
 
 	    .shopping-cart-content {
-	    	margin: 15px 10px 10px;
+	    	margin: 14px 10px 10px;
 	    	box-shadow: 0 3px 9.3px 0.7px rgba(0,0,0,.15);
     	    border: 1px solid #e5e5e5;
 	    	border-top: 2px solid $cx-primary-color;
@@ -104,6 +104,20 @@
 		    overflow-y: auto;
 		    padding: 30px 20px 0;
 		    @extend %mb0;
+
+		    &::before {
+			    border-bottom-style: solid;
+			    content: '';
+			    display: block;
+			    height: 0;
+			    position: absolute;
+			    width: 0;
+			    border: 7px solid;
+			    border-color: transparent transparent $cx-primary-color transparent;
+			    z-index: 99;
+			    right: 45px;
+			    top: 2px;
+		    }
 	    }
     }
 

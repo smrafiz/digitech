@@ -119,7 +119,7 @@ section {
 }
 
 /* Modal Fixes */
-.modal-open .main-nav-area.sticky {
+.modal-open .header-area.sticky {
     overflow-y: scroll;
 }
 
@@ -183,7 +183,7 @@ section {
 }
 
 /* Border-radius */
-.circle, .header-cart button .count-style, .header-cart .single-cart-item .product-quantity, #primary_slider .swiper-arrow, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span::before, .social-widget .list-inline a, .custom-radio .checkmark, .custom-radio .checkmark::after, .single-product-wrapper .product-review input[type=radio]::after, .single-post-wrapper .post-share a, .feedback-wrapper .feedback-socials .list-inline-item a {
+.circle, .header-cart button .count-style, .header-cart .single-cart-item .product-quantity, #primary_slider .swiper-arrow, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span::before, .gallery-with-thumbs .swiper-arrow, .social-widget .list-inline a, .custom-radio .checkmark, .custom-radio .checkmark::after, .newsletter-popup .popup-container .popup-close, .single-product-wrapper .product-review input[type=radio]::after, .single-post-wrapper .post-share a, .feedback-wrapper .feedback-socials .list-inline-item a {
     border-radius: 50%;
 }
 
@@ -192,14 +192,14 @@ section {
 /* Position */
 .pos-r, .header-cart button, .header-cart button i, .header-cart .single-cart-item .shopping-cart-delete, .header-cart .single-cart-item .shopping-cart-img, .header-search-area, .header-category-area, .header-category-area .header-category, .header-category-area .category-vertical-menu #header_category ul > li > a, .header-category-area .category-vertical-menu #header_category .mega,
 .header-category-area .category-vertical-menu #header_category .sub-menu, .header-category-area .category-vertical-menu .more-category, header .list-inline li.list-inline-item, header .list-inline li.list-inline-item button, header .list-inline li img, #main_nav > ul li.has-sub a span::after,
-#main_nav .mega a span::after, #main_nav .mega-container .mega-menu-title, #primary_slider .swiper-arrow i, .text-btn, .promo-banner > a, .section-title h2, .section-title.with-icon, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span, .gallery-with-thumbs .main-slider .swiper-slide > a, .product-image, .product-price > p .price-discount, .wishlist-compare > button::before, .widgettitle, .recent-posts-widget-container .post-thumbnail > a,
-.recent-posts-widget .post-thumbnail > a, .newsletter-widget .input-group, .list-categories-widget button, .categories-widget ul li a, .instagram-area .image-popup figure a, #to_top i, .custom-checkbox, .custom-radio, .cart-input, header, header .header-cart-area span.icon, .header-area, .footer-newsletter-section .newsletter-title, .footer-newsletter-section .newsletter-form-wrapper form, .newsletter-popup .popup-container .popup-body .input-group, .shop-toolbar .product-view-mode ul li a i, .single-product-wrapper .comments-advices li, .single-product-wrapper .product-review input[type=radio], .checkout-wrapper .user-actions h3, .user-info .user-name, .dashboard-list li > a, .comparison-wrapper .table tr del + span, .single-post-wrapper .post-media, .error-wrapper #search-form, .modal .modal-header .close {
+#main_nav .mega a span::after, #main_nav .mega-container .mega-menu-title, #primary_slider .swiper-arrow i, .text-btn, .promo-banner, .promo-banner > a, .section-title h2, .section-title.with-icon, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span, .gallery-with-thumbs .main-slider .swiper-slide > a, .product-image, .product-price > p .price-discount, .wishlist-compare > button::before, .widgettitle, .recent-posts-widget-container .post-thumbnail > a,
+.recent-posts-widget .post-thumbnail > a, .newsletter-widget .input-group, .list-categories-widget button, .categories-widget ul li a, .instagram-area .image-popup figure a, #to_top i, .custom-checkbox, .custom-radio, .cart-input, header, header .header-cart-area span.icon, header.header-type-2 .header-category-area .header-category, .header-area, .footer-newsletter-section .newsletter-title, .footer-newsletter-section .newsletter-form-wrapper form, .newsletter-popup .popup-container .popup-body .input-group, .shop-toolbar .product-view-mode ul li a i, .single-product-wrapper .comments-advices li, .single-product-wrapper .product-review input[type=radio], .checkout-wrapper .user-actions h3, .user-info .user-name, .dashboard-list li > a, .comparison-wrapper .table tr del + span, .single-post-wrapper .post-media, .error-wrapper #search-form, .modal .modal-header .close {
     position: relative;
 }
 
 .pos-a, .header-cart button .count-style, .header-cart .single-cart-item .product-quantity, .header-search-area .search-wrapper::before, .header-search-area .header-search-btn, .header-category-area .header-category > i, .header-category-area .category-vertical-menu, .header-category-area .category-vertical-menu #header_category .mega > ul,
 .header-category-area .category-vertical-menu #header_category .sub-menu > ul, .header-category-area .category-vertical-menu #header_category .mega::before,
-.header-category-area .category-vertical-menu #header_category .sub-menu::before, .header-category-area .category-vertical-menu .more-category i, header .list-inline li.list-inline-item::after, #primary_slider .swiper-arrow, #primary_slider .slide-content, .swiper-slide-active .slide-progress, .text-btn::after, .feature-box::after, .promo-banner.hover-effect-1 > a::before, .banner-with-text .promo-text, .section-title h2::before, .section-title.with-icon::before, .section-title.with-icon::after, .swiper-arrow, .swiper-container-horizontal .swiper-pagination-testimonial, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span::before, .nav.top-nav, .gallery-with-thumbs .main-slider .swiper-slide .image-overlay, .gallery-with-thumbs .main-slider .swiper-slide .image-overlay i, .product-image .hover-image, .product-image .quick-links, .product-image .label-product, .recent-posts-widget-container .overlay,
+.header-category-area .category-vertical-menu #header_category .sub-menu::before, .header-category-area .category-vertical-menu .more-category i, header .list-inline li.list-inline-item::after, #primary_slider .swiper-arrow, #primary_slider .slide-content, .swiper-slide-active .slide-progress, .text-btn::after, .feature-box::after, .promo-banner.hover-effect-1 > a::before, .promo-banner .promo-text, .banner-with-text .promo-text, .section-title h2::before, .section-title.with-icon::before, .section-title.with-icon::after, .swiper-arrow, .swiper-container-horizontal .swiper-pagination-testimonial, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span::before, .nav.top-nav, .gallery-with-thumbs .swiper-arrow, .gallery-with-thumbs .main-slider .swiper-slide .image-overlay, .gallery-with-thumbs .main-slider .swiper-slide .image-overlay i, .product-image .hover-image, .product-image .quick-links, .product-image .label-product, .recent-posts-widget-container .overlay,
 .recent-posts-widget .overlay, .newsletter-widget button, .list-categories-widget button::after, .categories-widget ul li a::before, .instagram-area .image-popup figure a::before, .custom-checkbox input[type="checkbox"], .custom-checkbox .checkmark, .custom-checkbox .checkmark::after, .custom-radio input[type="radio"], .dec.qtybutton,
 .inc.qtybutton, header .header-cart-area span.icon em, #primary_slider .slide-inner, .footer-newsletter-section .newsletter-title::before, .footer-newsletter-section .newsletter-form-wrapper input[type="submit"], .newsletter-popup .popup-container, .newsletter-popup .popup-container .popup-close, .newsletter-popup .popup-container .popup-body button, .single-product-wrapper .comments-advices li a::before, .checkout-wrapper .user-actions h3::before, .user-info .user-name::before, .dashboard-list li > a.active::after, .login-form .pass-show-btn, .single-post-wrapper .post-media .image-overlay, .single-post-wrapper .post-media i {
     position: absolute;
@@ -623,8 +623,8 @@ textarea:focus {
     margin-top: 0;
 }
 
-.mb0, .header-cart .dropdown-menu ul, .header-cart .single-cart-item:last-child, header .list-inline, header .list-inline .dropdown-menu ul li:last-child a, #main_nav .mega-container .mega-menu-title h3, .feature-box h2, .feature-box p, .section-title h2, .section-title.with-bg, .section-title .subtitle, .section-title.type-2 h2, .gallery-with-thumbs .main-slider .swiper-slide, .product-details .product-description p:last-of-type, .product-details .product-actions .product-stock .product-availability p, .social-sharing .list-inline, .single-category .category-content .sub-featured-categories, .sidebar-widget:last-child, .widget-content > p:last-of-type, .widget-content .footer-contact, .recent-posts-widget-container .posts-single:last-child,
-.recent-posts-widget .posts-single:last-child, .widgetized-menu ul, .categories-widget ul li:last-child, .instagram-area p, header .top-bar p, .footer-type-2 .newsletter-widget p, .footer-type-2 .list-inline, .footer-copyright p, #colophon .social-widget .list-inline li.list-inline-item, .footer-newsletter-section .newsletter-title h6, .shop-products-wrapper .product-layout.product-list .product-des p:last-of-type, .shop-products-wrapper .product-layout.product-list:last-child, .single-product-wrapper .tab-content .tab-pane p:last-of-type, .single-product-wrapper .tab-content .product-meta ul, .single-product-wrapper .tab-content .product-meta li:last-child, .shopping-cart-wrapper .table, .shopping-cart-wrapper label, .checkout-wrapper .user-login .login-info .lost-password, .checkout-wrapper .order-summary .product-list:last-child, .checkout-wrapper .order-summary .product-list .product-final-price, .checkout-wrapper .order-summary .table, .checkout-wrapper .checkout-payment p:last-of-type, .user-info p, .dashboard-content p, .dashboard-content table, .login-wrapper p, .single-post-wrapper .post-media figure, .single-post-wrapper .post-title, .single-post-wrapper p:last-of-type, .single-post-wrapper .post-footer .list-inline, .page-about p:last-of-type {
+.mb0, .header-cart .dropdown-menu ul, .header-cart .single-cart-item:last-child, header .list-inline, header .list-inline .dropdown-menu ul li:last-child a, #main_nav .mega-container .mega-menu-title h3, .feature-box h2, .feature-box p, .section-title h2, .section-title.with-bg, .section-title .subtitle, .section-title.type-2 h2, .product-details .product-description p:last-of-type, .product-details .product-actions .product-stock .product-availability p, .social-sharing .list-inline, .single-category .category-content .sub-featured-categories, .sidebar-widget:last-child, .widget-content > p:last-of-type, .widget-content .footer-contact, .recent-posts-widget-container .posts-single:last-child,
+.recent-posts-widget .posts-single:last-child, .widgetized-menu ul, .categories-widget ul li:last-child, .instagram-area p, header .top-bar p, header.header-type-2 .header-actions-area, .footer-type-2 .newsletter-widget p, .footer-type-2 .list-inline, .footer-copyright p, #colophon .social-widget .list-inline li.list-inline-item, .footer-newsletter-section .newsletter-title h6, .shop-products-wrapper .product-layout.product-list .product-des p:last-of-type, .shop-products-wrapper .product-layout.product-list:last-child, .single-product-wrapper .tab-content .tab-pane p:last-of-type, .single-product-wrapper .tab-content .product-meta ul, .single-product-wrapper .tab-content .product-meta li:last-child, .shopping-cart-wrapper .table, .shopping-cart-wrapper label, .checkout-wrapper .user-login .login-info .lost-password, .checkout-wrapper .order-summary .product-list:last-child, .checkout-wrapper .order-summary .product-list .product-final-price, .checkout-wrapper .order-summary .table, .checkout-wrapper .checkout-payment p:last-of-type, .user-info p, .dashboard-content p, .dashboard-content table, .login-wrapper p, .single-post-wrapper .post-media figure, .single-post-wrapper .post-title, .single-post-wrapper p:last-of-type, .single-post-wrapper .post-footer .list-inline, .page-about p:last-of-type {
     margin-bottom: 0;
 }
 
@@ -671,7 +671,7 @@ input[type="password"],
 input[type="search"],
 input[type="tel"], button,
 input[type="submit"], .header-cart button i, .header-category-area .category-vertical-menu #header_category .mega > ul,
-.header-category-area .category-vertical-menu #header_category .sub-menu > ul, .header-category-area .category-vertical-menu #header_category .mega .fullwidth-banner img, .header-category-area .category-vertical-menu .more-category i, #main_nav .mega-container .fullwidth-banner img, #primary_slider .swiper-arrow, .text-btn::after, .btn.btn-secondary, .promo-banner.hover-effect-3 > a img, .swiper-arrow, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span::before, #primary_slider .swiper-pagination .swiper-pagination-bullet, .gallery-with-thumbs .main-slider .swiper-slide .image-overlay, .gallery-with-thumbs .nav-slider .swiper-slide, .gallery-with-thumbs .nav-slider .swiper-slide img, .product-details .product-actions .color-list li a, .wishlist-compare > button::before, .single-category .category-image img, .recent-posts-widget-container .overlay,
+.header-category-area .category-vertical-menu #header_category .sub-menu > ul, .header-category-area .category-vertical-menu #header_category .mega .fullwidth-banner img, .header-category-area .category-vertical-menu .more-category i, #main_nav .mega-container .fullwidth-banner img, #primary_slider .swiper-arrow, .text-btn::after, .btn.btn-secondary, .promo-banner .promo-text > span, .promo-banner.hover-effect-3 > a img, .swiper-arrow, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span::before, #primary_slider .swiper-pagination .swiper-pagination-bullet, .gallery-with-thumbs .main-slider .swiper-slide .image-overlay, .gallery-with-thumbs .nav-slider .swiper-slide, .product-details .product-actions .color-list li a, .wishlist-compare > button::before, .single-category .category-image img, .recent-posts-widget-container .overlay,
 .recent-posts-widget .overlay, .list-widget .list-group > a::before, .categories-widget ul li a::before, .instagram-area .image-popup figure a::before, #to_top, .custom-checkbox input[type="checkbox"], .custom-checkbox .checkmark, .custom-checkbox .checkmark::after, .custom-radio .checkmark, .custom-radio .checkmark::after, .dec.qtybutton,
 .inc.qtybutton, header .header-cart-area .header-wishlist i, .header-area.sticky, .clients img, .footer-newsletter-section .newsletter-form-wrapper input[type="email"], .single-product-wrapper .product-review input[type=radio]::after, .checkout-wrapper .user-actions h3 span, .comparison-wrapper .table tr,
 .wishlist-wrapper .table tr, .single-post-wrapper .post-media .image-overlay {
@@ -784,11 +784,10 @@ input[type="submit"], .header-search-area, .header-category-area .header-categor
 /************************************************************
 	c03 - Base - Colors
 *************************************************************/
-a:focus, a:active, a:hover, .btn-link:hover, .btn-link:focus, .btn-link:active, .color-primary, .header-cart button:focus i, .header-cart button:hover i, .header-cart .single-cart-item .cart-price, .header-cart .shopping-cart-total h4 > span, .header-cart-area .list-inline .list-inline-item a:hover, .header-cart-area .list-inline .list-inline-item a:focus, .header-category-area .category-vertical-menu .more-category, #main_nav > ul > li.active > a, #main_nav > ul > li:hover > a, #main_nav > ul > li.active .active > a:not(.mega-menu-title), #main_nav .mega-container .mega-menu-title:hover, #main_nav .mega-container a:hover, #main_nav .mega-container a:focus, #main_nav > ul > li > ul a:hover, .default-btn.secondary, .text-btn.dark:hover, .feature-box h2, .banner-with-text h1, .banner-with-text h2 span, .section-title h2, .swiper-arrow:hover, .nav .nav-link.active, .nav .nav-link:hover, .nav .nav-link:focus, .product-price .price-new, .product-title .product-name a, .wishlist-compare > button:hover, .wishlist-compare > button:hover::before, .countdown-wrapper .countdown-section > div > span:last-child, .single-category .category-content h2 a, .single-category .category-content .sub-featured-categories li a:hover, .recent-posts-widget-container .post-title h5 a:hover,
+a:focus, a:active, a:hover, .btn-link:hover, .btn-link:focus, .btn-link:active, .color-primary, .header-cart button:focus i, .header-cart button:hover i, .header-cart .single-cart-item .cart-price, .header-cart .shopping-cart-total h4 > span, .header-cart-area .list-inline .list-inline-item a:hover, .header-cart-area .list-inline .list-inline-item a:focus, .header-category-area .category-vertical-menu .more-category, #main_nav > ul > li.active > a, #main_nav > ul > li:hover > a, #main_nav > ul > li.active .active > a:not(.mega-menu-title), #main_nav .mega-container .mega-menu-title:hover, #main_nav .mega-container a:hover, #main_nav .mega-container a:focus, #main_nav > ul > li > ul a:hover, .default-btn.secondary, .text-btn.dark:hover, .feature-box h2, .promo-banner .promo-text .promo-title strong, .banner-with-text h1, .banner-with-text h2 span, .section-title h2, .swiper-arrow:hover, .nav .nav-link.active, .nav .nav-link:hover, .nav .nav-link:focus, .product-price .price-new, .product-title .product-name a, .wishlist-compare > button:hover, .wishlist-compare > button:hover::before, .countdown-wrapper .countdown-section > div > span:last-child, .single-category .category-content h2 a, .single-category .category-content .sub-featured-categories li a:hover, .recent-posts-widget-container .post-title h5 a:hover,
 .recent-posts-widget .post-title h5 a:hover, .widgetized-menu li a:hover, .list-categories-widget button[aria-expanded="true"], .list-categories-widget button:hover, .list-categories-widget .cat-sub-menu a:hover, .list-widget .list-group > a:hover, .list-widget .list-group > a:focus, .categories-widget ul li a:hover, .categories-widget ul li a:focus, .categories-widget ul li a:hover::before, .categories-widget ul li a:focus::before, .color-widget .color-options li:hover a, .instagram-area p a, header .header-cart-area .header-wishlist > a:focus i, header .header-cart-area .header-wishlist > a:hover i,
 header .header-cart-area .header-cart button:focus i,
-header .header-cart-area .header-cart button:hover i, header.header-type-2 .list-inline .dropdown-menu ul li a:hover,
-header.header-type-2 .list-inline .dropdown-menu ul li a.current, header.header-type-3 .list-inline .currency-menu ul a.current,
+header .header-cart-area .header-cart button:hover i, header.header-type-3 .list-inline .currency-menu ul a.current,
 header.header-type-3 .list-inline .language-menu ul a.current, .footer-type-2 .copyright-text a, .footer-copyright a, .shop-toolbar .product-view-mode ul li a.active, .checkout-wrapper .user-actions h3 span, .checkout-wrapper .order-summary .product-list .product-final-price, .checkout-wrapper .checkout-payment .form-check a, .user-dashboard a:not(.btn), .login-wrapper .login-form a:hover, .login-wrapper .login-form a:focus, .comparison-wrapper .table .price strong,
 .wishlist-wrapper .table .price strong, .comparison-wrapper .table tr del + span, .single-post-wrapper p a, .single-post-wrapper .pagination li a:hover, .error-wrapper h1, .error-wrapper #search-form button:hover, .error-wrapper #search-form button:focus, .modal .modal-header .close:hover {
     color: #2e6ed5;
@@ -814,13 +813,15 @@ h1, h2, h3, h4, h5, h6, a, .btn-link, .color-secondary, .header-cart .single-car
 #primary_slider .slide-content.white-scheme .main-title,
 #primary_slider .slide-content.white-scheme .subtitle, #primary_slider.white-scheme .slide-content .promo-title,
 #primary_slider.white-scheme .slide-content .main-title,
-#primary_slider.white-scheme .slide-content .subtitle, .default-btn, .default-btn:hover, .default-btn:focus, .default-btn.secondary:hover, .default-btn.secondary:focus, .text-btn, .btn.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary.dark, .gallery-with-thumbs .main-slider .swiper-slide .image-overlay i, .product-image .label-product, .product-price > p .price-discount, .product-layout:hover .product-caption .action-links button, .social-sharing .list-inline li a, .single-category .category-content .view-more:hover, #colophon .widgettitle, .search-widget input[type="submit"], .tags-widget ul li a:hover, .list-widget .list-group > a:hover::before, .list-widget .list-group > a:focus::before, #to_top, #colophon.dark-footer h1, #colophon.dark-footer h2, #colophon.dark-footer h3, #colophon.dark-footer h4, #colophon.dark-footer h5, #colophon.dark-footer h6, #colophon.dark-footer p, #colophon.dark-footer span, #colophon.dark-footer li, #colophon.dark-footer a, .footer-copyright a:hover, #colophon .social-widget .list-inline a:hover, .footer-newsletter-section .newsletter-title::before, .footer-newsletter-section .newsletter-title h3, .footer-newsletter-section .newsletter-title h6, .footer-newsletter-section .newsletter-form-wrapper input[type="submit"], .color-scheme-two .footer-newsletter-section input[type="submit"]:hover, .newsletter-popup .popup-container .popup-close .p-close::before, .login-form .pass-show-btn, .comparison-wrapper .table .btn-danger:hover, .comparison-wrapper .table .btn-danger:focus,
+#primary_slider.white-scheme .slide-content .subtitle, .default-btn, .default-btn:hover, .default-btn:focus, .default-btn.secondary:hover, .default-btn.secondary:focus, .text-btn, .btn.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary.dark, .gallery-with-thumbs .swiper-arrow:hover, .gallery-with-thumbs .main-slider .swiper-slide .image-overlay i, .product-image .label-product, .product-price > p .price-discount, .product-layout:hover .product-caption .action-links button, .social-sharing .list-inline li a, .single-category .category-content .view-more:hover, #colophon .widgettitle, .search-widget input[type="submit"], .tags-widget ul li a:hover, .list-widget .list-group > a:hover::before, .list-widget .list-group > a:focus::before, #to_top, header.header-type-2 .header-cart-area span.icon,
+header.header-type-2 .header-cart-area span.icon i,
+header.header-type-2 .header-cart-area span.text, #colophon.dark-footer h1, #colophon.dark-footer h2, #colophon.dark-footer h3, #colophon.dark-footer h4, #colophon.dark-footer h5, #colophon.dark-footer h6, #colophon.dark-footer p, #colophon.dark-footer span, #colophon.dark-footer li, #colophon.dark-footer a, .footer-copyright a:hover, #colophon .social-widget .list-inline a:hover, .footer-newsletter-section .newsletter-title::before, .footer-newsletter-section .newsletter-title h3, .footer-newsletter-section .newsletter-title h6, .footer-newsletter-section .newsletter-form-wrapper input[type="submit"], .color-scheme-two .footer-newsletter-section input[type="submit"]:hover, .newsletter-popup .popup-container .popup-close .p-close::before, .login-form .pass-show-btn, .comparison-wrapper .table .btn-danger:hover, .comparison-wrapper .table .btn-danger:focus,
 .wishlist-wrapper .table .btn-danger:hover,
 .wishlist-wrapper .table .btn-danger:focus, .comparison-wrapper .table .btn-secondary:first-child, .single-post-wrapper .post-media i, .contact-form-wrapper .btn.btn-secondary, #whole .contact-form-wrapper .btn.btn-secondary:hover, .error-wrapper .btn.btn-secondary {
     color: white;
 }
 
-.color-dark, .header-cart .shopping-cart-title span, .header-search-area .nice-select, .header-search-area .nice-select > ul li, .feature-box p, .nav .nav-link, .product-details .product-name, .product-price .price-old, .product-caption .product-desc, .product-caption .action-links button, .single-category .category-content .sub-featured-categories li a, .single-category .category-content .view-more, #colophon .widgettitle.dark, .categories-widget ul li a::before, .instagram-area p a:hover, .color-scheme-two .footer-newsletter-section input[type="submit"], .single-product-wrapper .nav-pills li > .nav-link, .checkout-wrapper .user-actions h3 span:hover, body .checkout-wrapper .checkout-payment .form-check a:hover, .checkout-wrapper .checkout-payment .form-check a:hover, .user-dashboard a:not(.btn):hover, .dashboard-content table > tbody > tr > td, .comparison-wrapper .table .btn-danger,
+.color-dark, .header-cart .shopping-cart-title span, .header-search-area .nice-select, .header-search-area .nice-select > ul li, .feature-box p, .promo-banner .promo-text .promo-subtitle, .promo-banner .promo-text .promo-title, .nav .nav-link, .product-details .product-name, .product-price .price-old, .product-caption .product-desc, .product-caption .action-links button, .single-category .category-content .sub-featured-categories li a, .single-category .category-content .view-more, #colophon .widgettitle.dark, .categories-widget ul li a::before, .instagram-area p a:hover, .color-scheme-two .footer-newsletter-section input[type="submit"], .single-product-wrapper .nav-pills li > .nav-link, .checkout-wrapper .user-actions h3 span:hover, body .checkout-wrapper .checkout-payment .form-check a:hover, .checkout-wrapper .checkout-payment .form-check a:hover, .user-dashboard a:not(.btn):hover, .dashboard-content table > tbody > tr > td, .comparison-wrapper .table .btn-danger,
 .wishlist-wrapper .table .btn-danger, .single-post-wrapper p a:hover, .single-post-wrapper blockquote .blockquote-footer, .single-post-wrapper .pagination li a, .error-wrapper h2 {
     color: #252525;
 }
@@ -834,7 +835,7 @@ h1, h2, h3, h4, h5, h6, a, .btn-link, .color-secondary, .header-cart .single-car
 button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover, .bgc-primary, .header-cart button .count-style, .header-cart .single-cart-item .product-quantity, .header-search-area .header-search-btn, .header-search-area .header-search-btn:focus, .header-search-area .header-search-btn:hover, .header-category-area .header-category, header .list-inline .dropdown-menu ul li a.current, header .list-inline .dropdown-menu ul li a:hover, header .list-inline .dropdown-menu ul li a:focus, #primary_slider .swiper-arrow:hover, #primary_slider .slide-content .promo-title span, .default-btn:hover, .default-btn:focus, .default-btn.transparent:hover, .default-btn.transparent:focus, .default-btn.secondary:hover, .default-btn.secondary:focus, .text-btn::after, .btn.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary.dark:hover, .btn.btn-secondary.dark:focus, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span:hover::before,
-.swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > .swiper-pagination-bullet-active::before, #primary_slider .swiper-pagination .swiper-pagination-bullet:hover, #primary_slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .product-image .quick-links a.default-btn:hover, .product-image .label-product.label-new, .product-price > p .price-discount, .product-layout:hover .product-caption .action-links button:hover, .product-layout:hover .product-caption .action-links button:focus, .single-category .category-content .view-more:hover, .search-widget input[type="submit"], .tags-widget ul li a:hover, .list-widget .list-group > a:hover::before, .list-widget .list-group > a:focus::before, #to_top:hover, .custom-checkbox:hover input:checked ~ .checkmark, .custom-checkbox input:checked ~ .checkmark, .custom-radio input[type="radio"]:checked ~ .checkmark, .footer-newsletter-section .newsletter-form-wrapper input[type="submit"], .comparison-wrapper .table .btn-danger:hover, .comparison-wrapper .table .btn-danger:focus,
+.swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > .swiper-pagination-bullet-active::before, #primary_slider .swiper-pagination .swiper-pagination-bullet:hover, #primary_slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .gallery-with-thumbs .swiper-arrow:hover, .product-image .quick-links a.default-btn:hover, .product-image .label-product.label-new, .product-price > p .price-discount, .product-layout:hover .product-caption .action-links button:hover, .product-layout:hover .product-caption .action-links button:focus, .single-category .category-content .view-more:hover, .search-widget input[type="submit"], .tags-widget ul li a:hover, .list-widget .list-group > a:hover::before, .list-widget .list-group > a:focus::before, #to_top:hover, .custom-checkbox:hover input:checked ~ .checkmark, .custom-checkbox input:checked ~ .checkmark, .custom-radio input[type="radio"]:checked ~ .checkmark, header.header-type-2 .header-actions-area, .footer-newsletter-section .newsletter-form-wrapper input[type="submit"], .newsletter-popup .popup-container .popup-close, .comparison-wrapper .table .btn-danger:hover, .comparison-wrapper .table .btn-danger:focus,
 .wishlist-wrapper .table .btn-danger:hover,
 .wishlist-wrapper .table .btn-danger:focus, .contact-form-wrapper .btn.btn-secondary, .error-wrapper .btn.btn-secondary {
     background-color: #2e6ed5;
@@ -848,8 +849,7 @@ input[type="button"]:hover, .bgc-primary, .header-cart button .count-style, .hea
     background-color: #363f4d;
 }
 
-.bgc-transparent, .header-cart button:focus, .header-cart button:hover, .header-cart .dropdown-menu, .header-cart-area .list-inline .list-inline-item a:hover, .header-cart-area .list-inline .list-inline-item a:focus, header .list-inline li.list-inline-item button, header .list-inline .dropdown-menu, .default-btn.transparent, .list-categories-widget .card-header, .list-categories-widget button, header.header-type-2 .list-inline .dropdown-menu ul li a:hover,
-header.header-type-2 .list-inline .dropdown-menu ul li a.current, .error-wrapper #search-form button, .modal .modal-header .close:hover {
+.bgc-transparent, .header-cart button:focus, .header-cart button:hover, .header-cart .dropdown-menu, .header-cart-area .list-inline .list-inline-item a:hover, .header-cart-area .list-inline .list-inline-item a:focus, header .list-inline li.list-inline-item button, header .list-inline .dropdown-menu, .default-btn.transparent, .list-categories-widget .card-header, .list-categories-widget button, .error-wrapper #search-form button, .modal .modal-header .close:hover {
     background-color: transparent;
 }
 
@@ -857,9 +857,9 @@ header.header-type-2 .list-inline .dropdown-menu ul li a.current, .error-wrapper
     background-color: #f6f6f6;
 }
 
-.bgc-white, .header-cart .dropdown-menu .shopping-cart-content, .header-category-area .category-vertical-menu, .header-category-area .category-vertical-menu #header_category .mega > ul,
+.bgc-white, .header-cart .dropdown-menu .shopping-cart-content, .header-search-area, .header-category-area .category-vertical-menu, .header-category-area .category-vertical-menu #header_category .mega > ul,
 .header-category-area .category-vertical-menu #header_category .sub-menu > ul, header .list-inline .dropdown-menu ul, #main_nav .mega-container,
-#main_nav > ul > li > ul, #main_nav .mega-container ul, .default-btn.secondary, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span, .product-details .product-actions .product-size select, .product-details .product-actions .color-list li .white, .product-layout, .color-widget .color-options li span.white, .custom-radio .checkmark::after, header.header-type-3 .list-inline .currency-menu ul a.current,
+#main_nav > ul > li > ul, #main_nav .mega-container ul, .default-btn.secondary, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span, .gallery-with-thumbs .swiper-arrow, .product-details .product-actions .product-size select, .product-details .product-actions .color-list li .white, .product-layout, .color-widget .color-options li span.white, .custom-radio .checkmark::after, header.header-type-3 .list-inline .currency-menu ul a.current,
 header.header-type-3 .list-inline .language-menu ul a.current, .footer-newsletter-section .newsletter-form-wrapper input[type="email"], .newsletter-popup .popup-container {
     background-color: white;
 }
@@ -885,7 +885,7 @@ input[type="search"]:focus,
 input[type="tel"]:focus, .form-control:focus, button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover, .border-primary, .header-cart button:focus, .header-cart button:hover, #primary_slider .swiper-arrow:hover, .default-btn.transparent:hover, .default-btn.transparent:focus, .swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > span:hover,
-.swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > .swiper-pagination-bullet-active, #primary_slider .swiper-pagination .swiper-pagination-bullet:hover, #primary_slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .gallery-with-thumbs .nav-slider .swiper-slide:hover, .tags-widget ul li a:hover, .list-widget .list-group > a:hover::before, .list-widget .list-group > a:focus::before, .footer-newsletter-section .newsletter-form-wrapper input[type="email"]:active, .footer-newsletter-section .newsletter-form-wrapper input[type="email"]:focus, .single-product-wrapper .product-review input[type=radio]:hover::after, .comparison-wrapper .table .btn-danger:hover, .comparison-wrapper .table .btn-danger:focus,
+.swiper-container-horizontal .swiper-pagination-testimonial.swiper-pagination-bullets > .swiper-pagination-bullet-active, #primary_slider .swiper-pagination .swiper-pagination-bullet:hover, #primary_slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .gallery-with-thumbs .swiper-arrow:hover, .gallery-with-thumbs .nav-slider .swiper-slide.swiper-slide-active, .gallery-with-thumbs .nav-slider .swiper-slide:hover, .tags-widget ul li a:hover, .list-widget .list-group > a:hover::before, .list-widget .list-group > a:focus::before, .footer-newsletter-section .newsletter-form-wrapper input[type="email"]:active, .footer-newsletter-section .newsletter-form-wrapper input[type="email"]:focus, .single-product-wrapper .product-review input[type=radio]:hover::after, .comparison-wrapper .table .btn-danger:hover, .comparison-wrapper .table .btn-danger:focus,
 .wishlist-wrapper .table .btn-danger:hover,
 .wishlist-wrapper .table .btn-danger:focus, #whole .single-post-wrapper blockquote, .contact-form-wrapper input:not([type="submit"]):focus,
 .contact-form-wrapper textarea:focus, .error-wrapper #search-form input[type="search"]:focus {
@@ -1048,7 +1048,7 @@ to a reusable component.
 }
 
 .header-cart .dropdown-menu .shopping-cart-content {
-    margin: 15px 10px 10px;
+    margin: 14px 10px 10px;
     -webkit-box-shadow: 0 3px 9.3px 0.7px rgba(0, 0, 0, 0.15);
     box-shadow: 0 3px 9.3px 0.7px rgba(0, 0, 0, 0.15);
     border: 1px solid #e5e5e5;
@@ -1059,6 +1059,20 @@ to a reusable component.
     max-height: 270px;
     overflow-y: auto;
     padding: 30px 20px 0;
+}
+
+.header-cart .dropdown-menu ul::before {
+    border-bottom-style: solid;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 7px solid;
+    border-color: transparent transparent #2e6ed5 transparent;
+    z-index: 99;
+    right: 45px;
+    top: 2px;
 }
 
 .header-cart .single-cart-item {
@@ -1209,6 +1223,13 @@ to a reusable component.
     border: 2px solid #2e6ed5;
 }
 
+@media only screen and (max-width: 991px) {
+    .header-search-area {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
 .header-search-area .nice-select {
     font-size: 13px;
     height: 40px;
@@ -1335,6 +1356,8 @@ to a reusable component.
     right: -2px;
     top: -2px;
     cursor: pointer;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 /**
@@ -1357,8 +1380,8 @@ to a reusable component.
     width: 100%;
     top: 100%;
     z-index: 9;
-    margin-top: -2px;
     border: 2px solid #2e6ed5;
+    margin-top: -3px;
     border-top: 0;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -1570,8 +1593,22 @@ header .list-inline.top-bar-right {
     text-align: right;
 }
 
+@media only screen and (max-width: 991px) {
+    header .list-inline.top-bar-right {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #ebebeb;
+    }
+}
+
 header .list-inline.top-bar-right .top-links .dropdown-toggle {
     padding-left: 0;
+}
+
+@media only screen and (max-width: 991px) {
+    header .list-inline.top-bar-left {
+        text-align: center;
+    }
 }
 
 header .list-inline li.list-inline-item {
@@ -1818,19 +1855,28 @@ header .list-inline .dropdown-menu ul li:last-child a {
     margin-right: 0;
 }
 
-@media only screen and (max-width: 991px) {
-    #main_nav .mega-container .mega-menu-title,
-    #main_nav .mega-container .mega-menu-title + ul {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-}
-
 #main_nav .mega-container a {
     text-transform: capitalize;
     font-size: 13px;
     padding: 0;
     line-height: 30px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #main_nav .mega-container a {
+        font-size: 12px;
+    }
+}
+
+#main_nav .mega-container .mega-menu-title + ul {
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 991px) {
+    #main_nav .mega-container .mega-menu-title + ul li a {
+        padding-left: 0;
+    }
 }
 
 #main_nav > ul > li > ul {
@@ -1839,7 +1885,7 @@ header .list-inline .dropdown-menu ul li:last-child a {
 
 @media only screen and (max-width: 991px) {
     #main_nav > ul > li > ul {
-        padding: 15px;
+        padding: 0;
     }
 }
 
@@ -1850,6 +1896,12 @@ header .list-inline .dropdown-menu ul li:last-child a {
     font-size: 14px;
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #main_nav > ul > li > ul a {
+        font-size: 13px;
+    }
+}
+
 #main_nav > ul > li > ul li:last-child a {
     padding-bottom: 0;
 }
@@ -1857,6 +1909,20 @@ header .list-inline .dropdown-menu ul li:last-child a {
 @media only screen and (max-width: 991px) {
     #main_nav.mobile {
         overflow-x: hidden;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        -webkit-transform: translateY(-17px);
+        -ms-transform: translateY(-17px);
+        transform: translateY(-17px);
+        text-align: right;
+    }
+
+    #main_nav.mobile .menu-toggle {
+        width: auto;
+        padding: 10px 30px 10px 10px;
+        border-radius: 3px;
+        background: #2e6ed5;
     }
 
     #main_nav.mobile .menu-toggle i {
@@ -1867,18 +1933,47 @@ header .list-inline .dropdown-menu ul li:last-child a {
         max-height: 450px;
         overflow-y: auto;
         overflow-x: hidden;
+        margin-top: 11px;
+        border-top: 0;
+    }
+
+    #main_nav.mobile .menu-toggle::after {
+        right: 10px;
+        font-size: 9px;
+        margin-top: -5.5px;
     }
 
     #main_nav.mobile .dd-toggle {
         width: 70px;
-        right: -30px;
+    }
+}
+
+@media only screen and (max-width: 991px) and (max-width: 991px) {
+    #main_nav.mobile .dd-toggle {
+        width: 100px;
+        text-align: center;
     }
 
+    #main_nav.mobile .dd-toggle i {
+        right: -50px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
     #main_nav.mobile ul li a {
         padding: 15px 0;
         font-size: 13px;
     }
+}
 
+@media only screen and (max-width: 991px) and (max-width: 991px) {
+    #main_nav.mobile ul li a {
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
     #main_nav.mobile ul li a span {
         border: 0;
         background: transparent;
@@ -1902,7 +1997,15 @@ header .list-inline .dropdown-menu ul li:last-child a {
         box-shadow: none;
         border: 0;
     }
+}
 
+@media only screen and (max-width: 991px) and (max-width: 991px) {
+    #main_nav.mobile ul li ul {
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 991px) {
     #main_nav.mobile ul li ul a {
         color: #fff;
     }
@@ -1915,7 +2018,15 @@ header .list-inline .dropdown-menu ul li:last-child a {
         background: #434343;
         padding: 15px 30px;
     }
+}
 
+@media only screen and (max-width: 991px) and (max-width: 991px) {
+    #main_nav.mobile .mega-container {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
     #main_nav.mobile .mega-container .mega-menu-title {
         margin: 0;
         padding: 15px 0;
@@ -1925,7 +2036,6 @@ header .list-inline .dropdown-menu ul li:last-child a {
     #main_nav.mobile .mega-container .mega-menu-title h3 {
         font-size: 13px;
         color: #fff;
-        font-weight: normal;
         line-height: 30px;
     }
 
@@ -1939,6 +2049,12 @@ header .list-inline .dropdown-menu ul li:last-child a {
 
     #main_nav.mobile .mega-container .dd-toggle i {
         top: 65%;
+    }
+}
+
+@media only screen and (max-width: 991px) and (max-width: 991px) {
+    #main_nav.mobile .mega-container .dd-toggle {
+        width: 70px;
     }
 }
 
@@ -1995,13 +2111,14 @@ header .list-inline .dropdown-menu ul li:last-child a {
 
 @media only screen and (max-width: 991px) {
     #main_nav .mega-container .fullwidth-banner {
-        padding: 15px 0;
+        padding: 0;
     }
 }
 
 @media only screen and (max-width: 991px) {
     #main_nav .mega-container .fullwidth-banner a {
         width: calc(100% + 4px);
+        padding-left: 0;
     }
 }
 
@@ -2017,7 +2134,8 @@ header .list-inline .dropdown-menu ul li:last-child a {
 
 @media only screen and (max-width: 991px) {
     #main_nav .mega-container .fullwidth-banner img {
-        padding-bottom: 15px;
+        padding-bottom: 5px;
+        padding-top: 5px;
     }
 }
 
@@ -2564,6 +2682,11 @@ header .list-inline .dropdown-menu ul li:last-child a {
     animation-fill-mode: both;
 }
 
+.swiper-slide-active .slide-progress.bottom {
+    top: auto;
+    bottom: 0;
+}
+
 @-webkit-keyframes progress {
     0% {
         width: 0;
@@ -2777,6 +2900,12 @@ header .list-inline .dropdown-menu ul li:last-child a {
     }
 }
 
+@media only screen and (max-width: 991px) {
+    .support-section .col-12:nth-child(2) .feature-box::after {
+        content: none;
+    }
+}
+
 .support-section .feature-box.last::after {
     content: none;
 }
@@ -2871,6 +3000,41 @@ header .list-inline .dropdown-menu ul li:last-child a {
     transform: scale(1, 1);
 }
 
+.promo-banner .promo-text {
+    top: 50%;
+    right: 0;
+    z-index: 2;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 30px;
+    text-align: left;
+    line-height: 24px;
+    max-width: 250px;
+}
+
+.promo-banner .promo-text > span {
+    display: block;
+}
+
+.promo-banner .promo-text .promo-subtitle {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.promo-banner .promo-text .promo-title {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.promo-banner .promo-text .promo-title strong {
+    font-weight: 600;
+}
+
+.promo-banner.with-border > a {
+    border: 1px solid #ebebeb;
+}
+
 .promo-banner.hover-effect-3 > a {
     overflow: hidden;
     vertical-align: top;
@@ -2880,6 +3044,16 @@ header .list-inline .dropdown-menu ul li:last-child a {
 .promo-banner.hover-effect-3 > a img:hover {
     -webkit-transform: scale3d(1.03, 1.03, 1.03);
     transform: scale3d(1.03, 1.03, 1.03);
+}
+
+.promo-banner.hover-effect-3 > a:hover .promo-text .promo-subtitle {
+    -webkit-animation: fadeInUp 400ms ease-in-out;
+    animation: fadeInUp 400ms ease-in-out;
+}
+
+.promo-banner.hover-effect-3 > a:hover .promo-text .promo-title {
+    -webkit-animation: fadeInUp 600ms ease-in-out;
+    animation: fadeInUp 600ms ease-in-out;
 }
 
 .promo-banner-section .banner-with-text, .promo-banner-section
@@ -3173,12 +3347,6 @@ header .list-inline .dropdown-menu ul li:last-child a {
     right: 45px;
 }
 
-@media only screen and (max-width: 1199px) {
-    .swiper-arrow.top-nav {
-        margin-top: -75px;
-    }
-}
-
 @media only screen and (max-width: 767px) {
     .swiper-arrow.prev {
         left: 7px;
@@ -3257,6 +3425,10 @@ header .list-inline .dropdown-menu ul li:last-child a {
     line-height: 30px;
 }
 
+.nav.with-bg {
+    right: 100px;
+}
+
 .tab-content > .tab-pane {
     display: block;
     height: 0;
@@ -3332,123 +3504,32 @@ header .list-inline .dropdown-menu ul li:last-child a {
  * Components Product
  *
  */
-.gallery-with-thumbs {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.gallery-with-thumbs .product-thumb-container {
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100px;
-    -ms-flex: 0 0 100px;
-    flex: 0 0 100px;
-    max-width: 100px;
-}
-
-@media only screen and (max-width: 991px) {
-    .gallery-with-thumbs .product-thumb-container {
-        -webkit-box-ordinal-group: 3;
-        -webkit-order: 2;
-        -ms-flex-order: 2;
-        order: 2;
-        -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-        max-width: 100%;
-    }
-}
-
-.gallery-with-thumbs .product-image-container {
-    max-width: calc(100% - 100px);
-    -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
-    order: 2;
-}
-
-@media only screen and (max-width: 991px) {
-    .gallery-with-thumbs .product-image-container {
-        -webkit-box-ordinal-group: 2;
-        -webkit-order: 1;
-        -ms-flex-order: 1;
-        order: 1;
-        max-width: 100%;
-        margin-bottom: 15px;
-    }
-}
-
 .gallery-with-thumbs .swiper-arrow {
-    left: 43%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    height: 30px;
-    line-height: 0;
-    margin: 0;
-}
-
-@media only screen and (max-width: 991px) {
-    .gallery-with-thumbs .swiper-arrow {
-        margin-top: -15px;
-        -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        transform: rotate(-90deg);
-    }
-}
-
-.gallery-with-thumbs .swiper-arrow.next {
-    top: auto;
-    bottom: 30px;
-}
-
-@media only screen and (max-width: 1199px) {
-    .gallery-with-thumbs .swiper-arrow.next {
-        bottom: -5px;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .gallery-with-thumbs .swiper-arrow.next {
-        right: -5px;
-        bottom: auto;
-        top: 50%;
-        left: auto;
-    }
+    border: 1px solid #ebebeb;
+    opacity: 0;
+    margin-top: -23px;
+    top: 50%;
 }
 
 .gallery-with-thumbs .swiper-arrow.prev {
-    top: 30px;
+    left: -21px;
 }
 
-@media only screen and (max-width: 1199px) {
-    .gallery-with-thumbs .swiper-arrow.prev {
-        top: -5px;
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .gallery-with-thumbs .swiper-arrow.prev {
-        left: -5px;
-        top: 50%;
-        right: auto;
-    }
+.gallery-with-thumbs .swiper-arrow.next {
+    right: -21px;
 }
 
 .gallery-with-thumbs .swiper-arrow i {
-    font-size: 30px;
+    font-size: 14px;
+}
+
+.gallery-with-thumbs .main-slider .swiper-slide {
+    margin-bottom: 15px;
 }
 
 .gallery-with-thumbs .main-slider .swiper-slide > a {
     display: block;
+    border: 1px solid #ebebeb;
 }
 
 .gallery-with-thumbs .main-slider .swiper-slide > a:hover .image-overlay {
@@ -3474,55 +3555,12 @@ header .list-inline .dropdown-menu ul li:last-child a {
     font-size: 30px;
 }
 
-.gallery-with-thumbs .nav-slider {
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 991px) {
-    .gallery-with-thumbs .nav-slider {
-        padding-right: 0;
-    }
-}
-
-.gallery-with-thumbs .nav-slider .swiper-slide img {
-    width: auto;
-    height: 100%;
-    opacity: 0.3;
-}
-
-@media only screen and (max-width: 991px) {
-    .gallery-with-thumbs .nav-slider .swiper-slide img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-.gallery-with-thumbs .nav-slider .swiper-slide:hover img, .gallery-with-thumbs .nav-slider .swiper-slide.swiper-slide-active img {
-    opacity: 1;
+.gallery-with-thumbs .nav-slider .swiper-slide {
+    border: 1px solid #ebebeb;
 }
 
 .gallery-with-thumbs .nav-slider:hover .swiper-arrow {
     opacity: 1;
-}
-
-.gallery-with-thumbs .nav-slider:hover .swiper-arrow.next {
-    bottom: -5px;
-}
-
-@media only screen and (max-width: 991px) {
-    .gallery-with-thumbs .nav-slider:hover .swiper-arrow.next {
-        bottom: auto;
-    }
-}
-
-.gallery-with-thumbs .nav-slider:hover .swiper-arrow.prev {
-    top: -5px;
-}
-
-@media only screen and (max-width: 991px) {
-    .gallery-with-thumbs .nav-slider:hover .swiper-arrow.prev {
-        top: 50%;
-    }
 }
 
 .product-details .product-name {
@@ -3805,6 +3843,12 @@ header .list-inline .dropdown-menu ul li:last-child a {
     margin-bottom: 15px;
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .product-price > span:first-child {
+        display: none;
+    }
+}
+
 .product-price > p > span:not(:last-child) {
     margin-right: 15px;
 }
@@ -3958,6 +4002,13 @@ header .list-inline .dropdown-menu ul li:last-child a {
 .product-caption .action-links button.btn-cart {
     min-width: 135px;
     padding: 0 30px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .product-caption .action-links button.btn-cart {
+        min-width: 100px;
+        padding: 0 10px;
+    }
 }
 
 .product-caption .action-links button.btn-wishlist, .product-caption .action-links button.btn-compare {
@@ -5103,12 +5154,6 @@ header .list-inline .dropdown-menu ul li:last-child a {
  * Layout Header
  *
  */
-@media only screen and (max-width: 991px) {
-    header {
-        overflow-x: hidden;
-    }
-}
-
 header .top-bar {
     padding: 12px 0;
     background: #f9f9f9;
@@ -5157,6 +5202,15 @@ header .header-cart-area {
     height: 56px;
 }
 
+@media only screen and (max-width: 991px) {
+    header .header-cart-area {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
 header .header-cart-area .header-wishlist,
   header .header-cart-area .header-cart {
     min-width: 90px;
@@ -5174,6 +5228,12 @@ header .header-cart-area .header-wishlist > a,
 
 header .header-cart-area .header-wishlist {
     padding-right: 20px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    header .header-cart-area .header-wishlist {
+        padding-right: 0;
+    }
 }
 
 header .header-cart-area .header-wishlist span.icon em {
@@ -5210,48 +5270,29 @@ header .header-actions-area {
     margin-bottom: 20px;
 }
 
-header.header-type-2 {
+header.header-type-2 .header-actions-area {
+    padding: 10px 0;
+}
+
+header.header-type-2 .header-category-area .header-category {
+    background: #2358ad;
     z-index: 10;
 }
 
-@media only screen and (max-width: 991px) {
-    header.header-type-2 {
-        background: #22232b;
-    }
+header.header-type-2 .header-category-area .category-vertical-menu {
+    margin-top: 0;
 }
 
-header.header-type-2 .header-area {
-    padding-bottom: 15px;
+header.header-type-2 .header-search-area {
+    border-color: white;
 }
 
-@media only screen and (max-width: 991px) {
-    header.header-type-2 .header-area {
-        padding-bottom: 40px;
-    }
+header.header-type-2 .header-search-btn {
+    background: #2358ad;
 }
 
-header.header-type-2 #main_nav {
-    border-top: 0;
-}
-
-header.header-type-2 .main-nav-area.sticky {
-    background: rgba(209, 169, 133, 0.9);
-}
-
-@media only screen and (max-width: 991px) {
-    header.header-type-2 .main-nav-area.sticky {
-        background: #434343;
-    }
-}
-
-header.header-type-2 .main-nav-area.sticky:hover {
-    background: #d1a985;
-}
-
-@media only screen and (max-width: 991px) {
-    header.header-type-2 .main-nav-area.sticky:hover {
-        background: #434343;
-    }
+header.header-type-2 .header-cart .dropdown-menu ul::before {
+    border-bottom-color: white;
 }
 
 header.header-type-3 .list-inline .dropdown-menu.open {
@@ -5558,7 +5599,7 @@ header.header-type-4 .header-text span:first-child {
 
 @media only screen and (max-width: 991px) {
     .header-area.sticky {
-        background: #434343;
+        padding: 10px 0;
     }
 }
 
@@ -5571,14 +5612,7 @@ header.header-type-4 .header-text span:first-child {
 }
 
 @media only screen and (max-width: 991px) {
-    .header-area.sticky:hover {
-        background: #434343;
-    }
-}
-
-@media only screen and (max-width: 991px) {
     .header-area {
-        background: #434343;
         text-align: left;
     }
 
@@ -5638,7 +5672,7 @@ header.header-type-4 .header-text span:first-child {
 
 @media only screen and (max-width: 991px) {
     .footer-widgets-area .footer-inner {
-        padding-bottom: 20px;
+        padding-bottom: 40px;
     }
 }
 
@@ -5650,6 +5684,10 @@ header.header-type-4 .header-text span:first-child {
     .footer-widgets-area .footer-inner .row > div[class*='col-']:last-child .widget-content {
         margin-bottom: 20px;
     }
+}
+
+.footer-widgets-area .text-widget {
+    text-align: center;
 }
 
 .footer-type-2 .footer-inner {
@@ -6087,15 +6125,13 @@ header.header-type-4 .header-text span:first-child {
 }
 
 .newsletter-popup .popup-container .popup-close {
-    right: 0;
-    top: -25px;
-    width: 70px;
-    height: 24px;
-    line-height: 24px;
+    right: -12px;
+    top: -12px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
     text-align: center;
     cursor: pointer;
-    border: 1px solid white;
-    background-color: #444;
 }
 
 .newsletter-popup .popup-container .popup-close .p-close {
@@ -6103,10 +6139,10 @@ header.header-type-4 .header-text span:first-child {
 }
 
 .newsletter-popup .popup-container .popup-close .p-close::before {
-    content: "Close";
-    font-size: 10px;
-    text-transform: uppercase;
-    font-weight: 500;
+    font-family: "Ionicons";
+    content: "\f2c0";
+    display: inline-block;
+    font-size: 13px;
 }
 
 .newsletter-popup .popup-container .popup-close .p-close span {
@@ -6116,6 +6152,7 @@ header.header-type-4 .header-text span:first-child {
 .newsletter-popup .popup-container h2 {
     font-size: 30px;
     color: #343434;
+    letter-spacing: 3px;
     margin-bottom: 30px;
 }
 
@@ -6141,7 +6178,6 @@ header.header-type-4 .header-text span:first-child {
     width: 100%;
     height: 43px;
     padding: 0 155px 0 15px;
-    border-radius: 17px;
 }
 
 .newsletter-popup .popup-container .popup-body button {
@@ -6149,7 +6185,6 @@ header.header-type-4 .header-text span:first-child {
     right: 0;
     height: 43px;
     line-height: 43px;
-    border-radius: 17px;
 }
 
 .newsletter-popup .popup-container .custom-checkbox label {
@@ -8023,6 +8058,10 @@ header.header-type-4 .header-text span:first-child {
     .modal .modal-body .product-availability {
         margin-top: 20px;
     }
+}
+
+.modal .modal-body .price-new {
+    font-size: 20px;
 }
 
 .modal .modal-footer {

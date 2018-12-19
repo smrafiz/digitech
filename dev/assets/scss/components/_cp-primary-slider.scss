@@ -520,6 +520,11 @@
 	    animation: progress 7s ease-in-out;
         animation-fill-mode: both;
 		@extend .pos-a;
+
+		&.bottom {
+			top: auto;
+			bottom: 0;
+		}
 	}
 
 	@-webkit-keyframes progress {

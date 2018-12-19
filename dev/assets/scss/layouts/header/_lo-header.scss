@@ -6,9 +6,9 @@
 header {
 	@extend .pos-r;
 
-    @include media-only(notebook, max) {
-        overflow-x: hidden;
-    }
+    // @include media-only(notebook, max) {
+    //     overflow-x: hidden;
+    // }
 	
 	.top-bar {
 		padding: 12px 0;
@@ -47,6 +47,10 @@ header {
 	    align-items: center;
         height: 56px;
 
+        @include media-only(notebook, max) {
+            justify-content: center;
+        }
+
         .header-wishlist,
         .header-cart {
             min-width: 90px;
@@ -71,6 +75,10 @@ header {
 
         .header-wishlist {
             padding-right: 20px;
+
+            @include respond-to(notebook) {
+                padding-right: 0;
+            }
             span.icon em {
                 line-height: 19px;
             }
@@ -183,55 +191,43 @@ header {
    //  }
 
     &.header-type-2 {
-    	z-index: 10;
-
-        @include media-only(notebook, max) {
-            background: #22232b;
+        .header-actions-area {
+            padding: 10px 0;
+            @extend %mb0;
+            @extend %bgc-primary;
         }
 
-    	.header-area {
-    		padding-bottom: 15px;
-
-            @include media-only(notebook, max) {
-                padding-bottom: 40px;
+        .header-category-area {
+            .header-category {
+                background: darken($cx-primary-color, 10%);
+                z-index: 10;
+                @extend .pos-r;
             }
-    	}
 
-		#main_nav {
-			border-top: 0;
-		}
+            .category-vertical-menu {
+                margin-top: 0;
+            }
+        }
 
-    	.list-inline {
-    		.dropdown-menu {
-    			ul {
-    				li {
-    					a:hover,
-    					a.current {
-							@extend %bgc-transparent;
-							@extend %color-primary;
-    					}
-    				}
-    			}
-    		}
-    	}
+        .header-search-area {
+            border-color: white;
+        }
 
-    	.main-nav-area {
-    		&.sticky {
-    			background: rgba(209,169,133,.9);
+        .header-search-btn {
+            background: darken($cx-primary-color, 10%);
+        }
 
-                @include media-only(notebook, max) {
-                    background: #434343;
-                }
+        .header-cart-area {
+            span.icon,
+            span.icon i,
+            span.text {
+                @extend %color-white;
+            }
+        }
 
-    			&:hover {
-    				background: rgba(209,169,133,1);
-
-                    @include media-only(notebook, max) {
-                        background: #434343;
-                    }
-    			}
-    		}
-    	}
+        .header-cart .dropdown-menu ul::before {
+            border-bottom-color: white;
+        }
     }
 
     &.header-type-3 {

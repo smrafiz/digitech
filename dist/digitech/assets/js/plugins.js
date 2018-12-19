@@ -8,12 +8,13 @@ INDEX:
 	v03 - Photoswipe
 	v04 - simplyCountdown.js
 	v05 - Stellarnav Menu
-	v06 - Instafeed JS
+	v06 - jQuery UI
+	v07 - Instafeed JS
 
 ******************************/
 
 
-/* v07:
+/* v05:
  * Stellarnav.js 2.3.0
  * jQuery responsive multi-level dropdown menu designed to do most of the heavy CSS work for you.    
  * Copyright (c) 2016 Vinny Moreira - http://vinnymoreira.com
@@ -21,9 +22,7 @@ INDEX:
  */
 !function(n){n.fn.stellarNav=function(i,e,s){nav=n(this),e=n(window).width();var a=n.extend({theme:"plain",breakpoint:768,menuLabel:"Menu",sticky:!1,position:"static",openingSpeed:250,closingDelay:250,showArrows:!0,phoneBtn:"",locationBtn:"",closeBtn:!1,scrollbarFix:!1},i);return this.each(function(){if("light"!=a.theme&&"dark"!=a.theme||nav.addClass(a.theme),a.breakpoint&&(s=a.breakpoint),a.menuLabel&&(menuLabel=a.menuLabel),a.phoneBtn&&a.locationBtn)var i="third";else if(a.phoneBtn||a.locationBtn)i="half";else i="full";if("right"==a.position||"left"==a.position?nav.prepend('<a href="#" class="menu-toggle"><i class="fa fa-bars"></i> '+menuLabel+"</a>"):nav.prepend('<a href="#" class="menu-toggle '+i+'"><i class="fa fa-bars"></i> '+menuLabel+"</a>"),a.phoneBtn&&"right"!=a.position&&"left"!=a.position){var t='<a href="tel:'+a.phoneBtn+'" class="call-btn-mobile '+i+'"><i class="fa fa-phone"></i> <span>Call Us</span></a>';nav.find("a.menu-toggle").after(t)}if(a.locationBtn&&"right"!=a.position&&"left"!=a.position){t='<a href="'+a.locationBtn+'" class="location-btn-mobile '+i+'" target="_blank"><i class="fa fa-map-marker"></i> <span>Location</span></a>';nav.find("a.menu-toggle").after(t)}if(a.sticky&&(navPos=nav.offset().top,e>=s&&n(window).bind("scroll",function(){n(window).scrollTop()>navPos?nav.addClass("fixed"):nav.removeClass("fixed")})),"top"==a.position&&nav.addClass("top"),"left"==a.position||"right"==a.position){var l='<a href="#" class="close-menu '+i+'"><i class="fa fa-close"></i> <span>Close</span></a>',o='<a href="tel:'+a.phoneBtn+'" class="call-btn-mobile '+i+'"><i class="fa fa-phone"></i></a>',d='<a href="'+a.locationBtn+'" class="location-btn-mobile '+i+'" target="_blank"><i class="fa fa-map-marker"></i></a>';nav.find("ul:first").prepend(l),a.locationBtn&&nav.find("ul:first").prepend(d),a.phoneBtn&&nav.find("ul:first").prepend(o)}"right"==a.position&&nav.addClass("right"),"left"==a.position&&nav.addClass("left"),a.showArrows||nav.addClass("hide-arrows"),a.closeBtn&&"right"!=a.position&&"left"!=a.position&&nav.find("ul:first").append('<li><a href="#" class="close-menu"><i class="fa fa-close"></i> Close Menu</a></li>'),a.scrollbarFix&&n("body").addClass("stellarnav-noscroll-x"),n(".menu-toggle").on("click",function(i){i.preventDefault(),"left"==a.position||"right"==a.position?(nav.find("ul:first").stop(!0,!0).fadeToggle(a.openingSpeed),nav.toggleClass("active"),nav.hasClass("active")&&nav.hasClass("mobile")&&n(document).on("click",function(i){nav.hasClass("mobile")&&(n(i.target).closest(nav).length||(nav.find("ul:first").stop(!0,!0).fadeOut(a.openingSpeed),nav.removeClass("active")))})):(nav.find("ul:first").stop(!0,!0).slideToggle(a.openingSpeed),nav.toggleClass("active"))}),n(".close-menu").click(function(){nav.removeClass("active"),"left"==a.position||"right"==a.position?nav.find("ul:first").stop(!0,!0).fadeToggle(a.openingSpeed):nav.find("ul:first").stop(!0,!0).slideUp(a.openingSpeed).toggleClass("active")}),nav.find("li a").each(function(){n(this).next().length>0&&n(this).parent("li").addClass("has-sub").append('<a class="dd-toggle" href="#"><i class="fa fa-plus"></i></a>')}),nav.find("li .dd-toggle").on("click",function(i){i.preventDefault(),n(this).parent("li").children("ul").stop(!0,!0).slideToggle(a.openingSpeed),n(this).parent("li").toggleClass("open")});var f=function(){nav.find("li").unbind("mouseenter"),nav.find("li").unbind("mouseleave")};parentItems=nav.find("> ul > li");var r=function(){n(parentItems).each(function(){n(this).hasClass("mega")?(n(this).on("mouseenter",function(){n(this).find("ul").first().stop(!0,!0).slideDown(a.openingSpeed)}),n(this).on("mouseleave",function(){n(this).find("ul").first().stop(!0,!0).slideUp(a.openingSpeed)})):(n(this).on("mouseenter",function(){n(this).children("ul").stop(!0,!0).slideDown(a.openingSpeed)}),n(this).on("mouseleave",function(){n(this).children("ul").stop(!0,!0).delay(a.closingDelay).slideUp(a.openingSpeed)}),n(this).find("li.has-sub").on("mouseenter",function(){n(this).children("ul").stop(!0,!0).slideDown(a.openingSpeed)}),n(this).find("li.has-sub").on("mouseleave",function(){n(this).children("ul").stop(!0,!0).delay(a.closingDelay).slideUp(a.openingSpeed)}))})};function c(){window.innerWidth<=s?(f(),nav.addClass("mobile"),nav.removeClass("desktop"),!nav.hasClass("active")&&nav.find("ul:first").is(":visible")&&nav.find("ul:first").hide(),nav.find("li.mega").each(function(){n(this).find("ul").first().removeAttr("style"),n(this).find("ul").first().children().removeAttr("style")})):(nav.addClass("desktop"),nav.removeClass("mobile"),nav.hasClass("active")&&nav.removeClass("active"),!nav.hasClass("active")&&nav.find("ul:first").is(":hidden")&&nav.find("ul:first").show(),n("li.open").removeClass("open").find("ul:visible").hide(),f(),r(),navWidth=0,navIniPos=0,n(parentItems).each(function(){navWidth+=n(this)[0].getBoundingClientRect().width,navWidth=Math.round(navWidth),n(this).hasClass("mega")&&(n(this).find("ul").first().css({left:navIniPos}),numCols=n(this).attr("data-columns"),2==numCols?n(this).find("li.has-sub").addClass("column column-6"):3==numCols?n(this).find("ul").first().children().addClass("column column-4"):4==numCols?n(this).find("ul").first().children().addClass("column column-3"):5==numCols?n(this).find("ul").first().children().addClass("column column-5"):6==numCols?n(this).find("ul").first().children().addClass("column column-1"):n(this).find("ul").first().children().width("25%"))}),parentItems.hasClass("mega")&&nav.find("li.mega ul").css({"max-width":"100%"}))}c(),n(window).on("resize",function(){c()})})}}(jQuery);
 
-
-
-/* v02:
+/* v01:
  * jQuery Nice Select - v1.1.0
  * Select elements with customizable dropdowns  
  * https://github.com/hernansartorio/jquery-nice-select
@@ -32,7 +31,7 @@ INDEX:
 !function(e){e.fn.niceSelect=function(t){function s(t){t.after(e("<div></div>").addClass("nice-select").addClass(t.attr("class")||"").addClass(t.attr("disabled")?"disabled":"").attr("tabindex",t.attr("disabled")?null:"0").html('<span class="current"></span><ul class="list"></ul>'));var s=t.next(),n=t.find("option"),i=t.find("option:selected");s.find(".current").html(i.data("display")||i.text()),n.each(function(t){var n=e(this),i=n.data("display");s.find("ul").append(e("<li></li>").attr("data-value",n.val()).attr("data-display",i||null).addClass("option"+(n.is(":selected")?" selected":"")+(n.is(":disabled")?" disabled":"")).html(n.text()))})}if("string"==typeof t)return"update"==t?this.each(function(){var t=e(this),n=e(this).next(".nice-select"),i=n.hasClass("open");n.length&&(n.remove(),s(t),i&&t.next().trigger("click"))}):"destroy"==t?(this.each(function(){var t=e(this),s=e(this).next(".nice-select");s.length&&(s.remove(),t.css("display",""))}),0==e(".nice-select").length&&e(document).off(".nice_select")):console.log('Method "'+t+'" does not exist.'),this;this.hide(),this.each(function(){var t=e(this);t.next().hasClass("nice-select")||s(t)}),e(document).off(".nice_select"),e(document).on("click.nice_select",".nice-select",function(t){var s=e(this);e(".nice-select").not(s).removeClass("open"),s.toggleClass("open"),s.hasClass("open")?(s.find(".option"),s.find(".focus").removeClass("focus"),s.find(".selected").addClass("focus")):s.focus()}),e(document).on("click.nice_select",function(t){0===e(t.target).closest(".nice-select").length&&e(".nice-select").removeClass("open").find(".option")}),e(document).on("click.nice_select",".nice-select .option:not(.disabled)",function(t){var s=e(this),n=s.closest(".nice-select");n.find(".selected").removeClass("selected"),s.addClass("selected");var i=s.data("display")||s.text();n.find(".current").text(i),n.prev("select").val(s.data("value")).trigger("change")}),e(document).on("keydown.nice_select",".nice-select",function(t){var s=e(this),n=e(s.find(".focus")||s.find(".list .option.selected"));if(32==t.keyCode||13==t.keyCode)return s.hasClass("open")?n.trigger("click"):s.trigger("click"),!1;if(40==t.keyCode){if(s.hasClass("open")){var i=n.nextAll(".option:not(.disabled)").first();i.length>0&&(s.find(".focus").removeClass("focus"),i.addClass("focus"))}else s.trigger("click");return!1}if(38==t.keyCode){if(s.hasClass("open")){var l=n.prevAll(".option:not(.disabled)").first();l.length>0&&(s.find(".focus").removeClass("focus"),l.addClass("focus"))}else s.trigger("click");return!1}if(27==t.keyCode)s.hasClass("open")&&s.trigger("click");else if(9==t.keyCode&&s.hasClass("open"))return!1});var n=document.createElement("a").style;return n.cssText="pointer-events:auto","auto"!==n.pointerEvents&&e("html").addClass("no-csspointerevents"),this}}(jQuery);
 
 
-/* v03:
+/* v02:
  * Swiper 4.3.3
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/
@@ -43,7 +42,7 @@ INDEX:
 
 
 
-/* v06:
+/* v03:
  * PhotoSwipe - v4.1.2
  * JavaScript image gallery for mobile and desktop
  * Copyright (c) 2017 Dmitry Semenov - http://photoswipe.com
@@ -246,7 +245,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 initPhotoSwipeFromDOM('.image-popup');
 
 
-/* v06:
+/* v04:
  * simply-countdown.js - 1.3.2
  * Tiny javascript CountDown library
  * Copyright (c) 2018 Vincent Loy - https://github.com/VincentLoy/simplyCountdown.js
@@ -257,7 +256,7 @@ initPhotoSwipeFromDOM('.image-popup');
 
 
 
-/* v08:
+/* v07:
  * Instafeed.js - v1.4.0
  * A simple Instagram javascript plugin
  * https://github.com/stevenschobert/instafeed.js

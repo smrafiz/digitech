@@ -340,8 +340,11 @@ INDEX:
                     },
 
                     on: {
+                        init: function () {
+                            $('.swiper-slide.swiper-slide-visible').prev().addClass('visible-not-last');
+                        },
                         slideChange: function () {
-                            $('.swiper-slide.swiper-slide-visible').removeClass('visible-not-last');
+	                        $('.swiper-slide').removeClass('visible-not-last');
                             $('.swiper-slide.swiper-slide-visible').prev().addClass('visible-not-last');
                         },
                     }
@@ -405,7 +408,6 @@ INDEX:
                 slidesPerView: 3,
                 mousewheel: true,
                 loopAdditionalSlides: 10,
-                direction: 'vertical',
                 centeredSlides: true,
                 spaceBetween: 15,
                 autoplay: {

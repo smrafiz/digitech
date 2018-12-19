@@ -68,6 +68,10 @@
 	    	@extend %color-primary;
 	    }
 	}
+
+	&.with-bg {
+		right: 100px;
+	}
 }
 
 .tab-content {

@@ -10,10 +10,22 @@ header {
 		&.top-bar-right {
 			text-align: right;
 
+			@include media-only(notebook, max) {
+				margin-top: 10px;
+				padding-top: 10px;
+				border-top: 1px solid $cx-border-color;
+			}
+
 			.top-links {
 				.dropdown-toggle {
 					padding-left: 0;
 				}
+			}
+		}
+
+		&.top-bar-left {
+			@include media-only(notebook, max) {
+				text-align: center;
 			}
 		}
 

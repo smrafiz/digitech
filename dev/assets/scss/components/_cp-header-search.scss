@@ -10,6 +10,12 @@
     border: 2px solid $cx-primary-color;
 	@extend %slight-rounded;
     @extend .pos-r;
+    @extend %bgc-white;
+
+    @include media-only(notebook, max) {
+    	margin-top: 20px;
+    	margin-bottom: 20px;
+    }
     // @include cx-color(primary, border);
 
 	// @extend %rounded-corners;
@@ -132,6 +138,8 @@
 	    right: -2px;
 	    top: -2px;
 	    cursor: pointer;
+	    border-top-left-radius: 0;
+	    border-bottom-left-radius: 0;
 	    // @extend %rounded-corners;
 	    // @include cx-default-color(color, white);
 	    // @include cx-color(secondary, bg);

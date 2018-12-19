@@ -11,10 +11,11 @@ INDEX:
     s06 - Elements Carousel
     s07 - Tooltips
     s08 - Product Gallery with Thumbnails
-    s09 - Testimonial Carousel
-    s10 - Scroll to Top JS
-    s11 - Interactive Behaviour
-    s12 - Instagram Settings
+    s09 - Countdown Settings
+    s10 - Testimonial Carousel
+    s11 - Scroll to Top JS
+    s12 - Interactive Behaviour
+    s13 - Instagram Settings
 
 
 
@@ -25,7 +26,7 @@ INDEX:
     "use strict";
 
     // Declaring main variable
-    var ORORUS = {};
+    var DIGITECH = {};
 
 
     /************************************************************
@@ -42,7 +43,8 @@ INDEX:
         $galleryThumbs      = $(".gallery-with-thumbs"),
         $testimonial        = $(".testimonial-container"),
         $toTop              = $("#to_top"),
-        $intelHeader        = $(".main-nav-area"),
+        $countDownTimer     = $(".countdown-timer"),
+        $intelHeader        = $(".header-area"),
         $footer             = $("#colophon"),
         $priceRange         = $("#price_slider"),
         $instagram          = $("#instagram_feed");
@@ -57,7 +59,7 @@ INDEX:
     /************************************************************
         s01 - Nice Select Init
     *************************************************************/
-    ORORUS.niceInit = function() {
+    DIGITECH.niceInit = function() {
         $niceSelect.niceSelect();
     };
 
@@ -66,7 +68,7 @@ INDEX:
         s02 - Main Navigation Menu
     *************************************************************/
 
-    ORORUS.mainNav = function() {
+    DIGITECH.mainNav = function() {
         $mainMenu.stellarNav({
             theme: 'plain',
             breakpoint: 991,
@@ -92,7 +94,7 @@ INDEX:
         s03 - Image Background Settings
     *************************************************************/
 
-    ORORUS.imageBgSettings = function() {
+    DIGITECH.imageBgSettings = function() {
         $(".bg-img-wrapper").each(function() {
             var $this = $(this);
             var img = $this.find("img.visually-hidden").attr("src");
@@ -110,7 +112,7 @@ INDEX:
         s04 - Primary Slider Settings
     *************************************************************/
 
-    ORORUS.primarySlider = function() {
+    DIGITECH.primarySlider = function() {
         if ($pSlider.elExists()) {
 
             var interleaveOffset = 0.5;
@@ -181,7 +183,7 @@ INDEX:
         s05 - Elements Spacing & Classes
     *************************************************************/
 
-    ORORUS.ElementsSpacingClasses = function() {
+    DIGITECH.ElementsSpacingClasses = function() {
 
         // Fixed Navigation Menu Height
         var headerHeight = $intelHeader[0].getBoundingClientRect().height;
@@ -237,7 +239,7 @@ INDEX:
         s06 - Elements Carousel
     *************************************************************/
 
-    ORORUS.elementsCarousel = function() {
+    DIGITECH.elementsCarousel = function() {
 
         var visibleSlides       = null;
         var visibleSlides_xl    = null;
@@ -335,6 +337,13 @@ INDEX:
                                 delay: 5000
                             }
                         }
+                    },
+
+                    on: {
+                        slideChange: function () {
+                            $('.swiper-slide.swiper-slide-visible').removeClass('visible-not-last');
+                            $('.swiper-slide.swiper-slide-visible').prev().addClass('visible-not-last');
+                        },
                     }
                 });
             });
@@ -360,7 +369,7 @@ INDEX:
         s07 - Tooltips
     *************************************************************/
 
-    ORORUS.toolTips = function() {
+    DIGITECH.toolTips = function() {
         $('body').tooltip( {selector: '[data-toggle=tooltip]'} );
     };
 
@@ -369,7 +378,7 @@ INDEX:
         s08 - Product Gallery with Thumbnails
     *************************************************************/
 
-    ORORUS.galleryWithThumb = function() {
+    DIGITECH.galleryWithThumb = function() {
         if ($galleryThumbs.elExists()) {
 
             // Params
@@ -444,10 +453,55 @@ INDEX:
 
 
     /************************************************************
-        s09 - Testimonial Carousel
+        s09 - Countdown Settings
     *************************************************************/
 
-    ORORUS.testimonialCarousel = function() {
+    DIGITECH.countDown = function() {
+        if ($countDownTimer.elExists()) {
+
+            var countInstances = [];
+            $countDownTimer.each(function(index, element) {
+
+                var $this = $(this);
+
+                // Fetching from data attibutes
+                var year    = $this.attr("data-countdown-year") ? $this.attr("data-countdown-year") : 2019;
+                var month   = $this.attr("data-countdown-month") ? $this.attr("data-countdown-month") : 6;
+                var day     = $this.attr("data-countdown-day") ? $this.attr("data-countdown-day") : 28;
+
+                // Adding instances for multiple use
+                $this.addClass("instance-0" + index);
+
+                // Initializing the count down
+                countInstances[index] = simplyCountdown(".instance-0" + index, {
+                    year: year,
+                    month: month,
+                    day: day,
+                    words: {                            // Words displayed into the countdown
+                        days: 'day',
+                        hours: 'hr',
+                        minutes: 'min',
+                        seconds: 'sec',
+                        pluralLetter: 's'
+                    },
+                    plural: true,                       // Use plurals
+                    inline: false,
+                    enableUtc: false,
+                    refresh: 1000,                      // Default refresh every 1s
+                    sectionClass: 'countdown-section',  // Section css class
+                    amountClass: 'countdown-amount',    // Amount css class
+                    wordClass: 'countdown-word'         // Word css class
+                });
+            });
+        }
+    };
+
+
+    /************************************************************
+        s10 - Testimonial Carousel
+    *************************************************************/
+
+    DIGITECH.testimonialCarousel = function() {
         if ($testimonial.elExists()) {
             var testimonial = new Swiper($testimonial, {
                 loop: true,
@@ -473,10 +527,10 @@ INDEX:
 
 
     /************************************************************
-        s10 - Scroll to Top JS
+        s11 - Scroll to Top JS
     *************************************************************/
 
-    ORORUS.scrollToTop = function() {
+    DIGITECH.scrollToTop = function() {
         $toTop.hide();
         $window.on('scroll', function() {
             if ($window.scrollTop() > 300) {
@@ -495,10 +549,10 @@ INDEX:
 
 
     /************************************************************
-        s11 - Interactive Behaviour
+        s12 - Interactive Behaviour
     *************************************************************/
 
-    ORORUS.interactiveBehaviour = function() {
+    DIGITECH.interactiveBehaviour = function() {
 
         // Checkout Page Accordion Behaviour
         $( '#show_login' ).on('click', function() {
@@ -539,22 +593,22 @@ INDEX:
 
 
         // Newsletter Popup
-        setTimeout(function () {
-            $('#newsletter_popup').css({
-                "opacity": "1",
-                "visibility": "visible"
-            });
+        // setTimeout(function () {
+        //     $('#newsletter_popup').css({
+        //         "opacity": "1",
+        //         "visibility": "visible"
+        //     });
 
-            // Closing the popup by clicking in the close button or anywhere in the screen
-            $('body, .popup-close').on('click', function () {
-                $("#newsletter_popup").css('visibility', 'hidden').animate({opacity: 0}, 100);
-            });
+        //     // Closing the popup by clicking in the close button or anywhere in the screen
+        //     $('body, .popup-close').on('click', function () {
+        //         $("#newsletter_popup").css('visibility', 'hidden').animate({opacity: 0}, 100);
+        //     });
 
-            // Prevent closing popup upon clicking inside the popup
-            $('#newsletter_popup .popup-container').on('click', function (e) {
-                e.stopPropagation();
-            });
-        }, 2500);
+        //     // Prevent closing popup upon clicking inside the popup
+        //     $('#newsletter_popup .popup-container').on('click', function (e) {
+        //         e.stopPropagation();
+        //     });
+        // }, 2500);
 
 
         // Custom INC/DESC clickable button
@@ -579,10 +633,10 @@ INDEX:
 
 
     /************************************************************
-        s12 - Instagram Settings
+        s13 - Instagram Settings
     *************************************************************/
 
-    ORORUS.instagramSettings = function() {
+    DIGITECH.instagramSettings = function() {
         if ($instagram.elExists()) {
             var feed = new Instafeed({
                 get: 'user',
@@ -639,26 +693,27 @@ INDEX:
 
     // Window load functions
     $window.on('load', function() {
-        ORORUS.primarySlider(),
-        ORORUS.interactiveBehaviour();
-        ORORUS.imageBgSettings();
+        DIGITECH.primarySlider(),
+        DIGITECH.interactiveBehaviour();
+        DIGITECH.imageBgSettings();
     });
 
     // Document ready functions
     $document.on('ready', function() {
-        ORORUS.niceInit(),
-        ORORUS.mainNav(),
-        ORORUS.elementsCarousel(),
-        ORORUS.galleryWithThumb(),
-        ORORUS.testimonialCarousel(),
-        ORORUS.scrollToTop(),        
-        ORORUS.toolTips(),
-        ORORUS.instagramSettings();
+        DIGITECH.niceInit(),
+        DIGITECH.mainNav(),
+        DIGITECH.elementsCarousel(),
+        DIGITECH.galleryWithThumb(),
+        DIGITECH.testimonialCarousel(),
+        DIGITECH.scrollToTop(),        
+        DIGITECH.toolTips(),
+        DIGITECH.countDown(),
+        DIGITECH.instagramSettings();
     });
 
     // Window load and resize functions
     $window.on('load resize', function() {
-        ORORUS.ElementsSpacingClasses();
+        DIGITECH.ElementsSpacingClasses();
     });
 
 })(jQuery);

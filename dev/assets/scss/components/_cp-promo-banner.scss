@@ -6,6 +6,7 @@
 .promo-banner {
 	@extend %overflow-hidden;
 	@extend %mb-half;
+	@extend .pos-r;
 
 	> a {
 		display: inline-block;
@@ -98,6 +99,46 @@
 		}
 	}
 
+	.promo-text {
+	    top: 50%;
+	    right: 0;
+	    z-index: 2;
+	    transform: translateY(-50%);
+	    left: 30px;
+	    text-align: left;
+	    line-height: 24px;
+	    max-width: 250px;
+	    @extend .pos-a;
+
+	    > span {
+	    	display: block;
+	    	@extend %cx-transition;
+	    }
+
+	    .promo-subtitle {
+    	    font-size: 14px;
+		    margin-bottom: 15px;
+		    @extend %color-dark;
+	    }
+
+	    .promo-title {
+			font-size: 22px;
+		    font-weight: 500;
+		    @extend %color-dark;
+
+		    strong {
+		    	font-weight: 600;
+		    	@extend %color-primary;
+		    }
+	    }
+	}
+
+	&.with-border {
+		> a {
+			border: 1px solid $cx-border-color;
+		}
+	}
+
 	&.hover-effect-3 {
 		> a {
 		    overflow: hidden;
@@ -111,6 +152,18 @@
 					transform: scale3d(1.03, 1.03, 1.03);
 				}
 		    }
+
+			&:hover {
+			    .promo-text {
+			    	.promo-subtitle {
+		    		    animation: fadeInUp 400ms ease-in-out;
+			    	}
+
+			    	.promo-title {
+			    		animation: fadeInUp 600ms ease-in-out;
+			    	}
+			    }
+			}
 		}
 	}
 }

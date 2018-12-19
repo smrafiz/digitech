@@ -137,8 +137,8 @@
             margin-right: 0;
 
             @include media-only(notebook, max) {
-                margin-left: 15px;
-                margin-right: 15px;
+                // margin-left: 15px;
+                // margin-right: 15px;
             }
         }
 
@@ -147,9 +147,26 @@
             font-size: 13px;
             padding: 0;
             line-height: 30px;
+            
+            @include respond-to(notebook) {
+                font-size: 12px;
+            }
+
             &:hover,
             &:focus {
                 @extend %color-primary;
+            }
+        }
+
+        .mega-menu-title+ul {
+            padding-bottom: 0;
+            overflow: hidden;
+            li {
+                a {
+                    @include media-only(notebook, max) {
+                        padding-left: 0;
+                    }
+                }
             }
         }
     }
@@ -159,7 +176,7 @@
             > ul {
                 padding: 30px;
                 @include media-only(notebook, max) {
-                    padding: 15px;
+                    padding: 0;
                 }
 
                 a {
@@ -168,6 +185,10 @@
                     line-height: 30px;
                     font-size: 14px;
                     @extend %color-black;
+
+                    @include respond-to(notebook) {
+                        font-size: 13px;
+                    }
 
                     &:hover {
                         @extend %color-primary;
@@ -188,8 +209,18 @@
     @include media-only(notebook, max) {
         &.mobile {
             overflow-x: hidden;
+            position: absolute;
+            top: 0;
+            right: 15px;
+            transform: translateY(-17px);
+            text-align: right;
             
             .menu-toggle {
+                width: auto;
+                padding: 10px 30px 10px 10px;
+                border-radius: 3px;
+                background: $cx-primary-color;
+
                 i {
                     margin-right: 5px;
                 }
@@ -198,12 +229,30 @@
                     max-height: 450px;
                     overflow-y: auto;
                     overflow-x: hidden;
+                    margin-top: 11px;
+                    border-top: 0;
+                }
+
+                &::after {
+                    right: 10px;
+                    font-size: 9px;
+                    margin-top: -5.5px;
                 }
             }
 
             .dd-toggle {
                 width: 70px;
-                right: -30px;
+                // right: -30px;
+
+                @include media-only(notebook, max) {
+                    width: 100px;
+                    text-align: center;
+                    // right: -30px;
+
+                    i {
+                        right: -50px;
+                    }
+                }
             }
 
             ul {
@@ -211,6 +260,10 @@
                     a {
                         padding: 15px 0;
                         font-size: 13px;
+                        @include media-only(notebook, max) {
+                            text-align: left;
+                            padding-left: 20px;
+                        }
                         span {
                             border: 0;
                             background: transparent;
@@ -235,6 +288,9 @@
                         padding-bottom: 15px;
                         box-shadow: none;
                         border: 0;
+                        @include media-only(notebook, max) {
+                            padding-bottom: 0;
+                        }
 
                         a {
                             color: #fff;
@@ -253,6 +309,9 @@
             .mega-container {
                 background: #434343;
                 padding: 15px 30px;
+                @include media-only(notebook, max) {
+                    padding: 0 20px;
+                }
 
                 .mega-menu-title {
                     margin: 0;
@@ -262,7 +321,6 @@
                     h3 {
                         font-size: 13px;
                         color: #fff;
-                        font-weight: normal;
                         line-height: 30px;
                     }
 
@@ -282,6 +340,9 @@
                 .dd-toggle {
                     i {
                         top: 65%;
+                    }
+                    @include media-only(notebook, max) {
+                        width: 70px;
                     }
                 }
             }
@@ -334,7 +395,7 @@
             padding-top: $cx-col-spacing;
 
             @include media-only(notebook, max) {
-                padding: 15px 0;
+                padding: 0;
             }
 
             a {
@@ -342,6 +403,7 @@
 
                 @include media-only(notebook, max) {
                     width: calc(100% + 4px);
+                    padding-left: 0;
                 }
             }
 
@@ -354,7 +416,8 @@
                 }
 
                 @include media-only(notebook, max) {
-                    padding-bottom: 15px;
+                    padding-bottom: 5px;
+                    padding-top: 5px;
                 }
             }
         }

@@ -42,7 +42,7 @@ jQuery(window).on('load', function($){
         {
             "stylers": [
                 {
-                    "hue": "#dd0d0d"
+                    "hue": "#2e6ed5"
                 }
             ]
         },
